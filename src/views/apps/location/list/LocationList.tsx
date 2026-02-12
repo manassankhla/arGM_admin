@@ -46,8 +46,10 @@ const LocationList = () => {
     // Load data from localStorage
     const loadData = () => {
         const savedData = localStorage.getItem('location-list')
+
         if (savedData) {
             const parsedData = JSON.parse(savedData)
+
             setData(parsedData)
             setFilteredData(parsedData)
         }
@@ -63,6 +65,7 @@ const LocationList = () => {
             item.heroTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
             item.contactAddress.toLowerCase().includes(searchTerm.toLowerCase())
         )
+
         setFilteredData(result)
         setPage(0)
     }, [searchTerm, data])
@@ -91,6 +94,7 @@ const LocationList = () => {
     const handleDelete = (id: string) => {
         if (confirm('Are you sure you want to delete this location?')) {
             const newData = data.filter(item => item.id !== id)
+
             localStorage.setItem('location-list', JSON.stringify(newData))
             loadData()
         }

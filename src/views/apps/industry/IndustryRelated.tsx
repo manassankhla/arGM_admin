@@ -92,6 +92,7 @@ const IndustryRelated = ({ industryData, id, onSave }: { industryData?: any; id?
     const onSubmit = (data: RelatedContentData) => {
         if (onSave) {
             onSave(data)
+
             // alert('Industry Related Content Saved!') 
             // Moving alert to parent save for cleaner UX in some contexts, or keep here if standalone. 
             // For separate component usage like in Landing Settings, we usually save nicely.
@@ -135,6 +136,7 @@ const IndustryRelated = ({ industryData, id, onSave }: { industryData?: any; id?
                                                         size='small'
                                                         onDelete={() => {
                                                             const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                             field.onChange(newValue)
                                                         }}
                                                         onMouseDown={(event) => {
@@ -146,8 +148,10 @@ const IndustryRelated = ({ industryData, id, onSave }: { industryData?: any; id?
                                         )}
                                         onChange={(e) => {
                                             const value = e.target.value as string[]
+
                                             if (value.length <= 2) {
                                                 field.onChange(value)
+
                                                 // Auto trigger save/callback on change if desired, or let parent handle submit
                                                 handleSubmit(onSubmit)()
                                             }

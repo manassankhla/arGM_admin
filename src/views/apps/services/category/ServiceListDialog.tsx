@@ -47,6 +47,7 @@ const ServiceListDialog = ({ open, onClose, onEdit }: Props) => {
     const loadData = () => {
         const allServices = JSON.parse(localStorage.getItem('category-services') || '[]') as ServiceItemType[]
         const allCategories = JSON.parse(localStorage.getItem('service-categories') || '[]') as ServiceCategoryType[]
+
         setServices(allServices)
         setCategories(allCategories)
     }
@@ -54,6 +55,7 @@ const ServiceListDialog = ({ open, onClose, onEdit }: Props) => {
     const handleDelete = (id: string) => {
         if (confirm('Are you sure you want to delete this service?')) {
             const updatedServices = services.filter(s => s.id !== id)
+
             localStorage.setItem('category-services', JSON.stringify(updatedServices))
             setServices(updatedServices)
         }
@@ -61,7 +63,9 @@ const ServiceListDialog = ({ open, onClose, onEdit }: Props) => {
 
     const getCategoryName = (categoryId: string) => {
         const cat = categories.find(c => c.id === categoryId)
-        return cat ? cat.title : 'Unassigned'
+
+        
+return cat ? cat.title : 'Unassigned'
     }
 
     const filteredServices = services.filter(service =>

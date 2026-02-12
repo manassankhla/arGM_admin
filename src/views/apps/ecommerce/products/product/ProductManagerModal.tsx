@@ -52,12 +52,14 @@ const ProductManagerModal = ({ open, onClose, onEditProduct, onCreateProduct }: 
 
     const loadProducts = () => {
         const products = JSON.parse(localStorage.getItem('category-products') || '[]') as ProductItemType[]
+
         setAllProducts(products)
     }
 
     const handleDelete = (id: string) => {
         if (window.confirm('Are you sure you want to delete this product?')) {
             const updatedProducts = allProducts.filter(p => p.id !== id)
+
             localStorage.setItem('category-products', JSON.stringify(updatedProducts))
             setAllProducts(updatedProducts)
         }

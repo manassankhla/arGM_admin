@@ -92,6 +92,7 @@ const CaseStudyRelated = ({ caseStudyData, id, onSave }: { caseStudyData?: any; 
         } else if (id) {
             const storageKey = `casestudy-related-${id}`
             const savedData = localStorage.getItem(storageKey)
+
             if (savedData) {
                 reset(JSON.parse(savedData))
             }
@@ -101,6 +102,7 @@ const CaseStudyRelated = ({ caseStudyData, id, onSave }: { caseStudyData?: any; 
     const onSubmit = (data: RelatedContentData) => {
         if (id) {
             const storageKey = `casestudy-related-${id}`
+
             localStorage.setItem(storageKey, JSON.stringify(data))
         }
 
@@ -146,6 +148,7 @@ const CaseStudyRelated = ({ caseStudyData, id, onSave }: { caseStudyData?: any; 
                                                             size='small'
                                                             onDelete={() => {
                                                                 const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                 field.onChange(newValue)
                                                             }}
                                                             onMouseDown={(event) => {
@@ -157,6 +160,7 @@ const CaseStudyRelated = ({ caseStudyData, id, onSave }: { caseStudyData?: any; 
                                             )}
                                             onChange={(e) => {
                                                 const value = e.target.value as string[]
+
                                                 if (value.length <= 2) {
                                                     field.onChange(value)
                                                 }
@@ -202,6 +206,7 @@ const CaseStudyRelated = ({ caseStudyData, id, onSave }: { caseStudyData?: any; 
                                                                 size='small'
                                                                 onDelete={() => {
                                                                     const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                     field.onChange(newValue)
                                                                 }}
                                                                 onMouseDown={(event) => event.stopPropagation()}
@@ -242,6 +247,7 @@ const CaseStudyRelated = ({ caseStudyData, id, onSave }: { caseStudyData?: any; 
                                                                 size='small'
                                                                 onDelete={() => {
                                                                     const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                     field.onChange(newValue)
                                                                 }}
                                                                 onMouseDown={(event) => event.stopPropagation()}
@@ -282,6 +288,7 @@ const CaseStudyRelated = ({ caseStudyData, id, onSave }: { caseStudyData?: any; 
                                                                 size='small'
                                                                 onDelete={() => {
                                                                     const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                     field.onChange(newValue)
                                                                 }}
                                                                 onMouseDown={(event) => event.stopPropagation()}
@@ -322,6 +329,7 @@ const CaseStudyRelated = ({ caseStudyData, id, onSave }: { caseStudyData?: any; 
                                                                 size='small'
                                                                 onDelete={() => {
                                                                     const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                     field.onChange(newValue)
                                                                 }}
                                                                 onMouseDown={(event) => event.stopPropagation()}

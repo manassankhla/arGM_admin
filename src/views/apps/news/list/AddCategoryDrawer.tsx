@@ -42,6 +42,7 @@ const AddCategoryDrawer = ({ open, handleClose }: Props) => {
     useEffect(() => {
         if (open) {
             const savedCategories = localStorage.getItem('news-categories')
+
             if (savedCategories) {
                 setCategories(JSON.parse(savedCategories))
             }
@@ -58,6 +59,7 @@ const AddCategoryDrawer = ({ open, handleClose }: Props) => {
             const updatedCategories = categories.map(cat =>
                 cat.id === editingId ? { ...cat, title: data.title } : cat
             )
+
             saveCategories(updatedCategories)
             setEditingId(null)
         } else {
@@ -65,8 +67,10 @@ const AddCategoryDrawer = ({ open, handleClose }: Props) => {
                 id: Date.now().toString(),
                 title: data.title
             }
+
             saveCategories([...categories, newCategory])
         }
+
         reset()
     }
 
@@ -78,6 +82,7 @@ const AddCategoryDrawer = ({ open, handleClose }: Props) => {
     const handleDelete = (id: string) => {
         if (confirm('Are you sure you want to delete this category?')) {
             const updatedCategories = categories.filter(cat => cat.id !== id)
+
             saveCategories(updatedCategories)
         }
     }

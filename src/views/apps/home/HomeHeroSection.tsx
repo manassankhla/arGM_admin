@@ -65,8 +65,10 @@ const HomeHeroSection = () => {
     // Load data
     useEffect(() => {
         const savedData = localStorage.getItem('home_hero_data')
+
         if (savedData) {
             const parsed = JSON.parse(savedData)
+
             reset({
                 isVisible: parsed.isVisible !== undefined ? parsed.isVisible : true,
                 title: parsed.title || '',
@@ -84,6 +86,7 @@ const HomeHeroSection = () => {
         },
         onDrop: (acceptedFiles: File[]) => {
             const file = acceptedFiles[0]
+
             if (file) {
                 setFiles([Object.assign(file)])
                 setValue('image', file as any)
@@ -111,6 +114,7 @@ const HomeHeroSection = () => {
             subtitle: data.subtitle,
             btnText: data.btnText
         }
+
         localStorage.setItem('home_hero_data', JSON.stringify(dataToSave))
 
         console.log('Home Hero Saved:', data)

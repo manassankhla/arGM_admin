@@ -19,7 +19,8 @@ import Typography from '@mui/material/Typography'
 import { useForm, Controller, useFieldArray } from 'react-hook-form'
 
 // Local Imports
-import PartsRelated, { RelatedContentData } from './PartsRelated'
+import type { RelatedContentData } from './PartsRelated';
+import PartsRelated from './PartsRelated'
 
 type HeroSlide = {
     image: string
@@ -72,6 +73,7 @@ const PartsLandingSettings = ({ handleClose }: Props) => {
 
     useEffect(() => {
         const savedSettings = localStorage.getItem('parts-landing')
+
         if (savedSettings) {
             reset(JSON.parse(savedSettings))
         }
@@ -174,6 +176,7 @@ const PartsLandingSettings = ({ handleClose }: Props) => {
                                                                     accept='image/*'
                                                                     onChange={(event) => {
                                                                         const { files } = event.target
+
                                                                         if (files && files.length !== 0) {
                                                                             field.onChange(files[0].name)
                                                                         }

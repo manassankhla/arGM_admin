@@ -46,6 +46,7 @@ const AddJobTypeDrawer = ({ open, handleClose }: Props) => {
     // Load from localStorage on mount
     useEffect(() => {
         const savedData = localStorage.getItem('career-job-types')
+
         if (savedData) {
             setJobTypes(JSON.parse(savedData))
         } else {
@@ -73,6 +74,7 @@ const AddJobTypeDrawer = ({ open, handleClose }: Props) => {
         if (editingId !== null) {
             // Update
             const updatedJobTypes = jobTypes.map(type => (type.id === editingId ? { ...type, name: jobTypeName } : type))
+
             setJobTypes(updatedJobTypes)
             setEditingId(null)
         } else {
@@ -81,9 +83,12 @@ const AddJobTypeDrawer = ({ open, handleClose }: Props) => {
                 id: Date.now(),
                 name: jobTypeName
             }
+
             const updatedJobTypes = [...jobTypes, newJobType]
+
             setJobTypes(updatedJobTypes)
         }
+
         setJobTypeName('')
     }
 
@@ -94,6 +99,7 @@ const AddJobTypeDrawer = ({ open, handleClose }: Props) => {
 
     const handleDelete = (id: number) => {
         const updatedJobTypes = jobTypes.filter(type => type.id !== id)
+
         setJobTypes(updatedJobTypes)
     }
 

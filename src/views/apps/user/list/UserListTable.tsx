@@ -15,7 +15,7 @@ import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
-import Checkbox from '@mui/material/Checkbox'
+
 import IconButton from '@mui/material/IconButton'
 import { styled } from '@mui/material/styles'
 import TablePagination from '@mui/material/TablePagination'
@@ -49,7 +49,7 @@ import TableFilters from './TableFilters'
 import AddUserDrawer from './AddUserDrawer'
 import ChangePasswordDialog from './ChangePasswordDialog'
 
-import OptionMenu from '@core/components/option-menu'
+
 import CustomAvatar from '@core/components/mui/Avatar'
 
 // Util Imports
@@ -167,12 +167,15 @@ const UserListTable = ({ tableData }: { tableData?: UsersType[] }) => {
         if (user.id === selectedUser.id) {
           return { ...user, password }
         }
+
+
         return user
       })
 
       setData(updatedData)
       setFilteredData(updatedData)
     }
+
     setChangePasswordOpen(false)
     setSelectedUser(null)
   }

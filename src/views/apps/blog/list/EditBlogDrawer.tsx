@@ -121,11 +121,13 @@ const EditBlogDrawer = ({ open, handleClose, blogData, onUpdate }: Props) => {
     useEffect(() => {
         // Load Categories
         const savedCategories = localStorage.getItem('blog-categories')
+
         if (savedCategories) {
             setCategories(JSON.parse(savedCategories))
         }
 
         const savedPosts = JSON.parse(localStorage.getItem('blog-posts') || '[]')
+
         setAllBlogs(savedPosts)
     }, [])
 
@@ -223,7 +225,9 @@ const EditBlogDrawer = ({ open, handleClose, blogData, onUpdate }: Props) => {
                                         <div className='flex flex-wrap gap-2'>
                                             {(selected as string[]).map((value) => {
                                                 const blog = allBlogs.find((b: any) => b.id === value)
-                                                return <Chip key={value} label={blog?.blogTitle || value} size='small' />
+
+                                                
+return <Chip key={value} label={blog?.blogTitle || value} size='small' />
                                             })}
                                         </div>
                                     )}

@@ -19,7 +19,8 @@ import Typography from '@mui/material/Typography'
 import { useForm, Controller, useFieldArray } from 'react-hook-form'
 
 // Local Imports
-import PartsRelated, { RelatedContentData } from './PartsRelated'
+import type { RelatedContentData } from './PartsRelated';
+import PartsRelated from './PartsRelated'
 
 type DetailListItem = {
     heading: string
@@ -27,6 +28,7 @@ type DetailListItem = {
 }
 
 type DetailFormValues = {
+
     // Hero Section
     heroImage: string
     heroTitle: string
@@ -90,9 +92,12 @@ const PartsDetailSettings = ({ handleClose }: Props) => {
 
     useEffect(() => {
         const savedSettings = localStorage.getItem('parts-detail')
+
         if (savedSettings) {
             try {
                 const parsed = JSON.parse(savedSettings);
+
+
                 // Migration check: if old format (label/value) exists, convert to heading/description
                 if (parsed.detailsList && parsed.detailsList.length > 0 && 'label' in parsed.detailsList[0]) {
                     parsed.detailsList = parsed.detailsList.map((item: any) => ({
@@ -100,6 +105,7 @@ const PartsDetailSettings = ({ handleClose }: Props) => {
                         description: item.value
                     }))
                 }
+
                 reset(parsed)
             } catch (e) {
                 console.error("Failed to parse parts-detail settings", e)
@@ -165,6 +171,7 @@ const PartsDetailSettings = ({ handleClose }: Props) => {
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }

@@ -21,7 +21,8 @@ import TextField from '@mui/material/TextField'
 import InputAdornment from '@mui/material/InputAdornment'
 import Avatar from '@mui/material/Avatar'
 
-import CaseStudyEditor, { CaseStudyPost } from '../CaseStudyEditor'
+import type { CaseStudyPost } from '../CaseStudyEditor';
+import CaseStudyEditor from '../CaseStudyEditor'
 import CaseStudyLandingSettings from '../CaseStudyLandingSettings'
 
 const CaseStudyList = () => {
@@ -37,6 +38,7 @@ const CaseStudyList = () => {
 
     const fetchPosts = () => {
         const savedPosts = JSON.parse(localStorage.getItem('casestudy-posts') || '[]')
+
         setPosts(savedPosts)
     }
 
@@ -52,6 +54,7 @@ const CaseStudyList = () => {
     const handleDelete = (id: string) => {
         if (confirm('Are you sure you want to delete this case study?')) {
             const updatedPosts = posts.filter(item => item.id !== id)
+
             localStorage.setItem('casestudy-posts', JSON.stringify(updatedPosts))
             setPosts(updatedPosts)
         }
@@ -81,7 +84,9 @@ const CaseStudyList = () => {
     // Filter and Pagination Logic
     const filteredPosts = posts.filter((item) => {
         const term = searchTerm.toLowerCase()
-        return (
+
+        
+return (
             item.heading.toLowerCase().includes(term) ||
             (item.slug && item.slug.toLowerCase().includes(term))
         )

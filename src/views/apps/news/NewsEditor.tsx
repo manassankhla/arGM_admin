@@ -70,6 +70,7 @@ type NewsPost = {
     newsHeadline: string
     status: string
     publishedDate: string | null
+
     /* ... other fields ... */
 }
 
@@ -148,16 +149,19 @@ const NewsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) => 
     useEffect(() => {
         // Load Categories
         const savedCategories = localStorage.getItem('news-categories')
+
         if (savedCategories) {
             setCategories(JSON.parse(savedCategories))
         } else {
             // Default categories if none exist
             const defaultCategories = [{ id: '1', title: 'Startups' }, { id: '2', title: 'Technology' }, { id: '3', title: 'Business' }]
+
             setCategories(defaultCategories)
             localStorage.setItem('news-categories', JSON.stringify(defaultCategories))
         }
 
         const savedNews = JSON.parse(localStorage.getItem('news-posts') || '[]')
+
         setAllNews(savedNews)
 
         if (editId && (dataToEdit || !isDrawer)) {
@@ -181,7 +185,8 @@ const NewsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) => 
         const savedNews = JSON.parse(localStorage.getItem('news-posts') || '[]')
         const timestamp = new Date().toISOString()
 
-        let finalStatus = data.status
+        const finalStatus = data.status
+
         // Logic: if user clicks "Publish now" -> date is now. If "Schedule" -> check date.
         // But here we rely on form values.
 
@@ -191,6 +196,7 @@ const NewsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) => 
         }
 
         let newNewsList
+
         if (editId) {
             newNewsList = savedNews.map((post: any) =>
                 post.id === editId ? { ...post, ...finalData, updatedAt: timestamp } : post
@@ -202,6 +208,7 @@ const NewsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) => 
                 publishedAt: timestamp,
                 updatedAt: timestamp
             }
+
             newNewsList = [...savedNews, newPost]
         }
 
@@ -212,6 +219,7 @@ const NewsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) => 
             if (handleClose) handleClose()
         } else {
             alert(editId ? 'News Updated!' : 'News Published!')
+
             if (!editId) {
                 reset()
             } else {
@@ -286,7 +294,9 @@ const NewsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) => 
                                                         <div className='flex flex-wrap gap-2'>
                                                             {(selected as string[]).map((value) => {
                                                                 const news = allNews.find((b: any) => b.id === value)
-                                                                return <Chip key={value} label={news?.newsHeadline || value} size='small' />
+
+                                                                
+return <Chip key={value} label={news?.newsHeadline || value} size='small' />
                                                             })}
                                                         </div>
                                                     )}
@@ -337,6 +347,7 @@ const NewsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) => 
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }
@@ -470,6 +481,7 @@ const NewsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) => 
                                                     accept='image/*'
                                                     onChange={(event) => {
                                                         const { files } = event.target
+
                                                         if (files && files.length !== 0) {
                                                             setValue(`sections.${index}.imageUrl`, files[0].name)
                                                         }

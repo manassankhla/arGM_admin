@@ -23,10 +23,8 @@ import Collapse from '@mui/material/Collapse'
 import Box from '@mui/material/Box'
 
 // Type Imports
-import type { PartsCategoryType } from '../PartsCategoryEditor'
 
 // Component Imports
-import PartsCategoryEditor from '../PartsCategoryEditor'
 
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
@@ -41,6 +39,9 @@ import ListItemIcon from '@mui/material/ListItemIcon'
 import Checkbox from '@mui/material/Checkbox'
 import ListItemButton from '@mui/material/ListItemButton'
 import Chip from '@mui/material/Chip'
+
+import PartsCategoryEditor from '../PartsCategoryEditor'
+import type { PartsCategoryType } from '../PartsCategoryEditor'
 
 const MOCK_PRODUCTS = [
     { id: 'p1', title: 'Office Equipment' },
@@ -191,14 +192,17 @@ const CategoryList = () => {
     // Load data
     const loadData = () => {
         const savedData = localStorage.getItem('parts-categories')
+
         if (savedData) {
             const parsedData = JSON.parse(savedData)
+
             setData(parsedData)
             setFilteredData(parsedData)
         }
 
         // Load Parts
         const savedParts = localStorage.getItem('part-descriptions')
+
         if (savedParts) {
             setAvailableParts(JSON.parse(savedParts))
         } else {
@@ -209,6 +213,7 @@ const CategoryList = () => {
                 { id: 'dp3', partName: 'Control Panel Interface', partBrand: 'CyberSystems', updatedAt: new Date().toISOString() },
                 { id: 'dp4', partName: 'High-Pressure Valve', partBrand: 'Stark Industries', updatedAt: new Date().toISOString() }
             ]
+
             localStorage.setItem('part-descriptions', JSON.stringify(dummyParts))
             setAvailableParts(dummyParts)
         }
@@ -223,6 +228,7 @@ const CategoryList = () => {
         const result = data.filter(item =>
             item.title.toLowerCase().includes(searchTerm.toLowerCase())
         )
+
         setFilteredData(result)
         setPage(0)
     }, [searchTerm, data])
@@ -266,14 +272,18 @@ const CategoryList = () => {
                         updatedAt: new Date().toISOString()
                     }
                 }
+
                 if (cat.subcategories && cat.subcategories.length > 0) {
                     return { ...cat, subcategories: updateRecursive(cat.subcategories) }
                 }
-                return cat
+
+                
+return cat
             })
         }
 
         const newData = updateRecursive(data)
+
         localStorage.setItem('parts-categories', JSON.stringify(newData))
         loadData()
     }
@@ -285,17 +295,22 @@ const CategoryList = () => {
                     if (cat.id === selectedCategoryForMenu.id) {
                         return { ...cat, assignedProducts: tempSelectedProducts, updatedAt: new Date().toISOString() }
                     }
+
                     if (cat.subcategories && cat.subcategories.length > 0) {
                         return { ...cat, subcategories: updateRecursive(cat.subcategories) }
                     }
-                    return cat
+
+                    
+return cat
                 })
             }
 
             const newData = updateRecursive(data)
+
             localStorage.setItem('parts-categories', JSON.stringify(newData))
             loadData()
         }
+
         setProductDialogOpen(false)
         setSelectedCategoryForMenu(null)
     }
@@ -327,6 +342,7 @@ const CategoryList = () => {
                     subcategories: cat.subcategories ? deleteRecursive(cat.subcategories) : undefined
                 }))
             }
+
             const newData = deleteRecursive(data)
 
             localStorage.setItem('parts-categories', JSON.stringify(newData))

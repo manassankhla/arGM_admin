@@ -24,6 +24,7 @@ type FormData = {
 const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader()
+
         reader.readAsDataURL(file)
         reader.onload = () => resolve(reader.result as string)
         reader.onerror = (error) => reject(error)
@@ -50,8 +51,10 @@ const GalleryLandingSettings = () => {
     // Load saved data
     useEffect(() => {
         const savedData = localStorage.getItem('gallery-landing-settings')
+
         if (savedData) {
             const parsedData = JSON.parse(savedData)
+
             reset(parsedData)
         }
     }, [reset])
@@ -86,9 +89,11 @@ const GalleryLandingSettings = () => {
                                                             multiple
                                                             onChange={async (event) => {
                                                                 const { files } = event.target
+
                                                                 if (files && files.length !== 0) {
                                                                     const base64Promises = Array.from(files).map(file => fileToBase64(file))
                                                                     const base64Images = await Promise.all(base64Promises)
+
                                                                     field.onChange([...field.value, ...base64Images])
                                                                 }
                                                             }}
@@ -125,6 +130,7 @@ const GalleryLandingSettings = () => {
                                                                     className='absolute top-0 right-0 bg-white hover:bg-gray-100'
                                                                     onClick={() => {
                                                                         const newImages = field.value.filter((_, i) => i !== index)
+
                                                                         field.onChange(newImages)
                                                                     }}
                                                                 >

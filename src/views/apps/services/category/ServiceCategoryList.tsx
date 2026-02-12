@@ -22,14 +22,16 @@ import InputAdornment from '@mui/material/InputAdornment'
 import Chip from '@mui/material/Chip'
 
 // Type Imports
+import { number } from 'valibot'
+
 import type { ServiceCategoryType } from './ServiceCategoryEditor'
 
 // Component Imports
 import ServiceCategoryEditor from './ServiceCategoryEditor'
-import ServicePageEditor, { ServiceItemType } from '../service/ServicePageEditor'
+import type { ServiceItemType } from '../service/ServicePageEditor';
+import ServicePageEditor from '../service/ServicePageEditor'
 import ServiceMappingDialog from './ServiceMappingDialog'
 import ServiceListDialog from './ServiceListDialog'
-import { number } from 'valibot'
 
 // Row Component
 type RowProps = {
@@ -117,8 +119,10 @@ const ServiceCategoryList = () => {
     const loadData = () => {
         // Categories
         const savedData = localStorage.getItem('service-categories')
+
         if (savedData) {
             const parsedData = JSON.parse(savedData)
+
             setData(parsedData)
             setFilteredData(parsedData)
         }
@@ -126,6 +130,7 @@ const ServiceCategoryList = () => {
         // Services & Counts
         const savedServices = JSON.parse(localStorage.getItem('category-services') || '[]') as ServiceItemType[]
         const counts: Record<string, number> = {}
+
         savedServices.forEach(s => {
             if (s.categoryId) {
                 counts[s.categoryId] = (counts[s.categoryId] || 0) + 1
@@ -143,11 +148,13 @@ const ServiceCategoryList = () => {
         const result = data.filter(item =>
             item.title.toLowerCase().includes(searchTerm.toLowerCase())
         )
+
         setFilteredData(result)
         setPage(0)
     }, [searchTerm, data])
 
     const handleChangePage = (event: unknown, newPage: number) => setPage(newPage)
+
     const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
         setRowsPerPage(+event.target.value)
         setPage(0)
@@ -202,6 +209,7 @@ const ServiceCategoryList = () => {
     const handleDelete = (id: string) => {
         if (confirm('Are you sure you want to delete this category?')) {
             const newData = data.filter(cat => cat.id !== id)
+
             localStorage.setItem('service-categories', JSON.stringify(newData))
             loadData()
         }
@@ -220,6 +228,7 @@ const ServiceCategoryList = () => {
                 onSave={handleServiceSave}
                 onCancel={() => {
                     setViewMode('list')
+
                     // if (selectedCategory) setAssignmentModalOpen(true)
                 }}
             />

@@ -6,17 +6,14 @@ import type { FormEvent } from 'react'
 
 // Next Imports
 import Link from 'next/link'
-import { useParams, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 // MUI Imports
 import Typography from '@mui/material/Typography'
 import TextField from '@mui/material/TextField'
 import IconButton from '@mui/material/IconButton'
 import InputAdornment from '@mui/material/InputAdornment'
-import Checkbox from '@mui/material/Checkbox'
 import Button from '@mui/material/Button'
-import FormControlLabel from '@mui/material/FormControlLabel'
-import Divider from '@mui/material/Divider'
 import Alert from '@mui/material/Alert'
 
 // Third-party Imports
@@ -30,7 +27,6 @@ import type { SlotProps } from 'input-otp'
 
 // Type Imports
 import type { Mode } from '@core/types'
-import type { Locale } from '@/configs/i18n'
 
 // Component Imports
 import Logo from '@components/layout/shared/Logo'
@@ -43,7 +39,6 @@ import { useImageVariant } from '@core/hooks/useImageVariant'
 import { useSettings } from '@core/hooks/useSettings'
 
 // Util Imports
-import { getLocalizedUrl } from '@/utils/i18n'
 
 // Style Imports
 import styles from '@/libs/styles/inputOtp.module.css'
@@ -89,7 +84,9 @@ const Login = ({ mode }: { mode: Mode }) => {
 
   // Hooks
   const router = useRouter()
-  const { lang: locale } = useParams()
+
+
+
   const { settings } = useSettings()
 
   // Vars
@@ -112,6 +109,7 @@ const Login = ({ mode }: { mode: Mode }) => {
     }
   })
 
+
   const authBackground = useImageVariant(mode, lightImg, darkImg)
 
   const characterIllustration = useImageVariant(
@@ -124,13 +122,14 @@ const Login = ({ mode }: { mode: Mode }) => {
 
   const handleClickShowPassword = () => setIsPasswordShown(show => !show)
 
-  const onLoginSubmit = (data: FormData) => {
+  const onLoginSubmit = () => {
     // Simulate login validation here if needed
     setStep('otp')
   }
 
   const onOtpSubmit = (e: FormEvent) => {
     e.preventDefault()
+
     if (otp && otp.length === 6) {
       router.push('/')
     }

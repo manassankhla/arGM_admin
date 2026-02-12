@@ -2,6 +2,7 @@
 
 // React Imports
 import { useState, useEffect } from 'react'
+
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
@@ -22,7 +23,8 @@ import TextField from '@mui/material/TextField'
 import InputAdornment from '@mui/material/InputAdornment'
 
 // Component Imports
-import ProductPageEditor, { ProductItemType } from '../product/ProductPageEditor'
+import type { ProductItemType } from '../product/ProductPageEditor';
+import ProductPageEditor from '../product/ProductPageEditor'
 
 const AllProductsManager = () => {
     // Hooks
@@ -43,6 +45,7 @@ const AllProductsManager = () => {
 
     const loadProducts = () => {
         const allProducts = JSON.parse(localStorage.getItem('category-products') || '[]') as ProductItemType[]
+
         setProducts(allProducts)
     }
 
@@ -55,6 +58,7 @@ const AllProductsManager = () => {
         if (confirm('Are you sure you want to delete this product?')) {
             const allProducts = JSON.parse(localStorage.getItem('category-products') || '[]') as ProductItemType[]
             const newProducts = allProducts.filter(p => p.id !== id)
+
             localStorage.setItem('category-products', JSON.stringify(newProducts))
             setProducts(newProducts)
         }

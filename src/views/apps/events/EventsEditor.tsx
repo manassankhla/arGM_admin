@@ -48,6 +48,7 @@ import '@/libs/styles/tiptapEditor.css'
 const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader()
+
         reader.readAsDataURL(file)
         reader.onload = () => resolve(reader.result as string)
         reader.onerror = (error) => reject(error)
@@ -77,6 +78,7 @@ type EventPost = {
     heading: string
     status: string
     eventDate: string | null
+
     /* ... other fields ... */
 }
 
@@ -155,11 +157,13 @@ const EventsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) =
     useEffect(() => {
         // Load Categories
         const savedCategories = localStorage.getItem('events-categories')
+
         if (savedCategories) {
             setCategories(JSON.parse(savedCategories))
         } else {
             // Default categories if none exist
             const defaultCategories = [{ id: '1', title: 'Music' }, { id: '2', title: 'Tech' }, { id: '3', title: 'Workshop' }]
+
             setCategories(defaultCategories)
             localStorage.setItem('events-categories', JSON.stringify(defaultCategories))
         }
@@ -199,6 +203,7 @@ const EventsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) =
         }
 
         let newEventsList
+
         if (editId) {
             newEventsList = savedEvents.map((post: any) =>
                 post.id === editId ? { ...post, ...finalData, updatedAt: timestamp } : post
@@ -210,6 +215,7 @@ const EventsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) =
                 publishedAt: timestamp,
                 updatedAt: timestamp
             }
+
             newEventsList = [...savedEvents, newPost]
         }
 
@@ -220,6 +226,7 @@ const EventsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) =
             if (handleClose) handleClose()
         } else {
             alert(editId ? 'Event Updated!' : 'Event Published!')
+
             if (!editId) {
                 reset()
             } else {
@@ -328,7 +335,9 @@ const EventsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) =
                                         control={control}
                                         render={({ field }) => {
                                             const isValidImage = field.value && field.value.startsWith('data:image/')
-                                            return (
+
+                                            
+return (
                                                 <div className='flex flex-col gap-4'>
                                                     <div className='flex items-center gap-4'>
                                                         {isValidImage && <Typography variant='body2' className='font-medium'>Main Image</Typography>}
@@ -341,8 +350,10 @@ const EventsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) =
                                                                 accept='image/*'
                                                                 onChange={async (event) => {
                                                                     const { files } = event.target
+
                                                                     if (files && files.length !== 0) {
                                                                         const base64 = await fileToBase64(files[0])
+
                                                                         field.onChange(base64)
                                                                     }
                                                                 }}
@@ -393,8 +404,10 @@ const EventsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) =
                                                         multiple
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 const fileNames = Array.from(files).map(f => f.name)
+
                                                                 field.onChange([...field.value, ...fileNames])
                                                             }
                                                         }}
@@ -407,6 +420,7 @@ const EventsEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props) =
                                                             label={img}
                                                             onDelete={() => {
                                                                 const newGallery = field.value.filter((_, i) => i !== index)
+
                                                                 field.onChange(newGallery)
                                                             }}
                                                         />

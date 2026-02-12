@@ -35,8 +35,10 @@ const DataProtectionTabs = () => {
     // Load data
     useEffect(() => {
         const savedData = localStorage.getItem('data_protection_tabs_data')
+
         if (savedData) {
             const parsed = JSON.parse(savedData)
+
             setTabItems(parsed.tabValues || [])
         }
     }, [])
@@ -58,6 +60,7 @@ const DataProtectionTabs = () => {
 
     const handleDelete = (index: number) => {
         const newItems = tabItems.filter((_, i) => i !== index)
+
         saveData(newItems)
     }
 
@@ -67,7 +70,8 @@ const DataProtectionTabs = () => {
             tabDescription: data.tabDescription
         }
 
-        let newItems = [...tabItems]
+        const newItems = [...tabItems]
+
         if (editingIndex !== null) {
             newItems[editingIndex] = newItem
         } else {
@@ -81,8 +85,10 @@ const DataProtectionTabs = () => {
     // Helper to strip HTML for preview
     const stripHtml = (html: string) => {
         const tmp = document.createElement("DIV");
+
         tmp.innerHTML = html;
-        return tmp.textContent || tmp.innerText || "";
+        
+return tmp.textContent || tmp.innerText || "";
     }
 
     return (

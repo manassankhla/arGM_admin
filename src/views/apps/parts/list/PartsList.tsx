@@ -2,6 +2,7 @@
 
 // React Imports
 import { useState } from 'react'
+
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 
@@ -13,6 +14,7 @@ import Grid from '@mui/material/Grid2'
 // Component Imports
 import PartsLandingSettings from '../PartsLandingSettings'
 import PartsDetailSettings from '../PartsDetailSettings'
+
 // import PartDescriptionSettings from '../PartDescriptionSettings' // Replaced by Manager
 import PartDescriptionManager from '../PartDescriptionManager'
 

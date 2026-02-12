@@ -43,8 +43,10 @@ const IndustryList = () => {
     // Load data
     const loadData = () => {
         const savedData = localStorage.getItem('industry-list')
+
         if (savedData) {
             const parsedData = JSON.parse(savedData)
+
             setData(parsedData)
             setFilteredData(parsedData)
         }
@@ -59,6 +61,7 @@ const IndustryList = () => {
         const result = data.filter(item =>
             item.title.toLowerCase().includes(searchTerm.toLowerCase())
         )
+
         setFilteredData(result)
         setPage(0)
     }, [searchTerm, data])
@@ -87,6 +90,7 @@ const IndustryList = () => {
     const handleDelete = (id: string) => {
         if (confirm('Are you sure you want to delete this industry?')) {
             const newData = data.filter(item => item.id !== id)
+
             localStorage.setItem('industry-list', JSON.stringify(newData))
             loadData()
         }

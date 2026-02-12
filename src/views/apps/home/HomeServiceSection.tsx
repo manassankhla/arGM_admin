@@ -52,8 +52,10 @@ const HomeServiceSection = () => {
     // Load data
     useEffect(() => {
         const savedData = localStorage.getItem('home_service_data')
+
         if (savedData) {
             const parsed = JSON.parse(savedData)
+
             reset({
                 isVisible: parsed.isVisible !== undefined ? parsed.isVisible : true,
                 title: parsed.title || '',
@@ -70,6 +72,7 @@ const HomeServiceSection = () => {
             text: formData.text,
             serviceItems: items
         }
+
         localStorage.setItem('home_service_data', JSON.stringify(dataToSave))
     }
 
@@ -90,7 +93,9 @@ const HomeServiceSection = () => {
 
     const handleDelete = (index: number) => {
         const newItems = serviceItems.filter((_, i) => i !== index)
+
         setServiceItems(newItems)
+
         // Trigger a save using current form values (might be slightly stale if user typed without saving, 
         // but typically user should save main form. For now we save items separately in a way)
         // To be safe, we just update local state and let user click "Save" on top, 
@@ -105,7 +110,8 @@ const HomeServiceSection = () => {
             text: data.text
         }
 
-        let newItems = [...serviceItems]
+        const newItems = [...serviceItems]
+
         if (editingIndex !== null) {
             newItems[editingIndex] = newItem
         } else {

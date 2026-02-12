@@ -46,6 +46,7 @@ const FaqDrawer = ({ open, handleClose, faqData, setData, data }: Props) => {
             const updatedData = data.map(item =>
                 item.id === faqData.id ? { ...item, title, description } : item
             )
+
             setData(updatedData)
         } else {
             // Add logic
@@ -54,8 +55,10 @@ const FaqDrawer = ({ open, handleClose, faqData, setData, data }: Props) => {
                 title,
                 description
             }
+
             setData([...data, newFaq])
         }
+
         handleClose()
     }
 

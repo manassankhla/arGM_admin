@@ -2,6 +2,8 @@
 
 // React Imports
 import { useEffect } from 'react'
+
+// Third-party Imports
 import { Controller, useForm } from 'react-hook-form'
 
 // MUI Imports
@@ -24,8 +26,10 @@ const AboutDescription = () => {
     // Load data from LocalStorage
     useEffect(() => {
         const savedData = localStorage.getItem('about_description_data')
+
         if (savedData) {
             const parsed = JSON.parse(savedData)
+
             reset({ description: parsed.description || '' })
         }
     }, [reset])

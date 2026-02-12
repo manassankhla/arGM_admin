@@ -1,7 +1,7 @@
 'use client'
 
 // React Imports
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 
 // MUI Imports
 import Card from '@mui/material/Card'
@@ -127,6 +127,7 @@ const ServiceRelated = ({ serviceData, onSave }: { serviceData?: any; onSave?: (
                                                         size='small'
                                                         onDelete={() => {
                                                             const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                             field.onChange(newValue)
                                                         }}
                                                         onMouseDown={(event) => {
@@ -138,6 +139,7 @@ const ServiceRelated = ({ serviceData, onSave }: { serviceData?: any; onSave?: (
                                         )}
                                         onChange={(e) => {
                                             const value = e.target.value as string[]
+
                                             if (value.length <= 2) {
                                                 field.onChange(value)
                                                 handleSubmit(onSubmit)()

@@ -26,8 +26,10 @@ const DataProtectionDescription = () => {
     // Load data
     useEffect(() => {
         const savedData = localStorage.getItem('data_protection_description_data')
+
         if (savedData) {
             const parsed = JSON.parse(savedData)
+
             reset({ description: parsed.description || '' })
         }
     }, [reset])

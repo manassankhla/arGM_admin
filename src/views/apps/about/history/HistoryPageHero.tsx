@@ -63,6 +63,7 @@ const HistoryPageHero = () => {
         },
         onDrop: (acceptedFiles: File[]) => {
             const file = acceptedFiles[0]
+
             if (file) {
                 setFiles([Object.assign(file)])
                 setValue('heroImage', file)

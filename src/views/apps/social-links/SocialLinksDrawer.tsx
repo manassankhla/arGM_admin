@@ -54,6 +54,7 @@ const SocialLinksDrawer = ({ open, handleClose, onSave, initialData }: Props) =>
             if (initialData) {
                 // Find platform key based on icon if possible, or just use what's saved
                 const foundPlatform = SOCIAL_PLATFORMS.find(p => p.icon === initialData.icon)
+
                 reset({
                     platform: foundPlatform ? foundPlatform.icon : (initialData.icon || ''), // We store icon class as value
                     url: initialData.url || ''
@@ -74,11 +75,13 @@ const SocialLinksDrawer = ({ open, handleClose, onSave, initialData }: Props) =>
 
     const onSubmit = (data: any) => {
         const selectedPlatform = SOCIAL_PLATFORMS.find(p => p.icon === data.platform)
+
         const payload = {
             icon: data.platform,
             name: selectedPlatform ? selectedPlatform.name : 'Unknown', // Derive name from icon selection
             url: data.url
         }
+
         onSave(payload)
         handleReset()
     }
@@ -113,7 +116,9 @@ const SocialLinksDrawer = ({ open, handleClose, onSave, initialData }: Props) =>
                                     label='Select Platform'
                                     renderValue={(selected) => {
                                         const p = SOCIAL_PLATFORMS.find(item => item.icon === selected)
-                                        return (
+
+                                        
+return (
                                             <div className="flex items-center gap-2">
                                                 <i className={selected as string} />
                                                 <span>{p?.name}</span>

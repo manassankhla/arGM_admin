@@ -85,8 +85,10 @@ const PartsRelated = ({ partsData, onSave }: { partsData?: any; onSave?: (data: 
 
     useEffect(() => {
         const savedProjects = localStorage.getItem('category-products')
+
         if (savedProjects) {
             const parsedProjects = JSON.parse(savedProjects)
+
             if (Array.isArray(parsedProjects) && parsedProjects.length > 0) {
                 setProjects(parsedProjects.map((p: any) => ({ id: p.id, title: p.title })))
             }
@@ -146,6 +148,7 @@ const PartsRelated = ({ partsData, onSave }: { partsData?: any; onSave?: (data: 
                                                         size='small'
                                                         onDelete={() => {
                                                             const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                             field.onChange(newValue)
                                                         }}
                                                         onMouseDown={(event) => {
@@ -157,6 +160,7 @@ const PartsRelated = ({ partsData, onSave }: { partsData?: any; onSave?: (data: 
                                         )}
                                         onChange={(e) => {
                                             const value = e.target.value as string[]
+
                                             if (value.length <= 2) {
                                                 field.onChange(value)
                                                 handleSubmit(onSubmit)()

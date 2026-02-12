@@ -107,7 +107,8 @@ const ChatLog = ({ chatStore, isBelowLgScreen, isBelowMdScreen, isBelowSmScreen,
 
   const messagesToDisplay = activeUserChat?.chat.filter((msg) => {
     if (!searchQuery) return true
-    return msg.message.toLowerCase().includes(searchQuery.toLowerCase())
+    
+return msg.message.toLowerCase().includes(searchQuery.toLowerCase())
   }) || []
 
   // Refs

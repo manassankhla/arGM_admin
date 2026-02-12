@@ -19,7 +19,8 @@ import MenuItem from '@mui/material/MenuItem'
 import { useForm, Controller } from 'react-hook-form'
 
 // Local Imports
-import CaseStudyRelated, { RelatedContentData } from './CaseStudyRelated'
+import type { RelatedContentData } from './CaseStudyRelated';
+import CaseStudyRelated from './CaseStudyRelated'
 
 type LandingFormValues = {
     heading: string
@@ -81,6 +82,7 @@ const CaseStudyLandingSettings = ({ handleClose }: Props) => {
 
     useEffect(() => {
         const savedSettings = localStorage.getItem('casestudy-landing')
+
         if (savedSettings) {
             reset(JSON.parse(savedSettings))
         }
@@ -216,6 +218,7 @@ const CaseStudyLandingSettings = ({ handleClose }: Props) => {
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }

@@ -100,6 +100,7 @@ const CareerRelated = ({ careerData, id }: { careerData?: any; id?: string }) =>
 
     const onSubmit = (data: RelatedContentData) => {
         const storageKey = `career-related-${id || 'new'}`
+
         localStorage.setItem(storageKey, JSON.stringify(data))
         console.log('Submitted Career Related Content:', data)
         alert('Career Related Content Saved!')
@@ -139,6 +140,7 @@ const CareerRelated = ({ careerData, id }: { careerData?: any; id?: string }) =>
                                                             size='small'
                                                             onDelete={() => {
                                                                 const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                 field.onChange(newValue)
                                                             }}
                                                             onMouseDown={(event) => {
@@ -150,6 +152,7 @@ const CareerRelated = ({ careerData, id }: { careerData?: any; id?: string }) =>
                                             )}
                                             onChange={(e) => {
                                                 const value = e.target.value as string[]
+
                                                 if (value.length <= 2) {
                                                     field.onChange(value)
                                                 }
@@ -195,6 +198,7 @@ const CareerRelated = ({ careerData, id }: { careerData?: any; id?: string }) =>
                                                                 size='small'
                                                                 onDelete={() => {
                                                                     const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                     field.onChange(newValue)
                                                                 }}
                                                                 onMouseDown={(event) => event.stopPropagation()}
@@ -235,6 +239,7 @@ const CareerRelated = ({ careerData, id }: { careerData?: any; id?: string }) =>
                                                                 size='small'
                                                                 onDelete={() => {
                                                                     const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                     field.onChange(newValue)
                                                                 }}
                                                                 onMouseDown={(event) => event.stopPropagation()}
@@ -275,6 +280,7 @@ const CareerRelated = ({ careerData, id }: { careerData?: any; id?: string }) =>
                                                                 size='small'
                                                                 onDelete={() => {
                                                                     const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                     field.onChange(newValue)
                                                                 }}
                                                                 onMouseDown={(event) => event.stopPropagation()}
@@ -315,6 +321,7 @@ const CareerRelated = ({ careerData, id }: { careerData?: any; id?: string }) =>
                                                                 size='small'
                                                                 onDelete={() => {
                                                                     const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                     field.onChange(newValue)
                                                                 }}
                                                                 onMouseDown={(event) => event.stopPropagation()}

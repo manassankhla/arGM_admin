@@ -2,10 +2,11 @@
 
 
 // Next Imports
+import { useState, useEffect } from 'react'
+
 import Link from 'next/link'
 
 // React Imports
-import { useState, useEffect } from 'react'
 
 // MUI Imports
 import Card from '@mui/material/Card'
@@ -25,7 +26,8 @@ import DialogContent from '@mui/material/DialogContent'
 import { useForm, Controller, useFieldArray } from 'react-hook-form'
 
 // Local Imports
-import ServiceRelated, { RelatedContentData } from './ServiceRelated'
+import type { RelatedContentData } from './ServiceRelated';
+import ServiceRelated from './ServiceRelated'
 
 type DetailSection = {
     title: string
@@ -45,6 +47,7 @@ type FormData = {
 const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader()
+
         reader.readAsDataURL(file)
         reader.onload = () => resolve(reader.result as string)
         reader.onerror = (error) => reject(error)
@@ -91,6 +94,7 @@ const ServiceLandingSettings = () => {
 
     useEffect(() => {
         const savedData = localStorage.getItem('service-landing-settings')
+
         if (savedData) {
             reset(JSON.parse(savedData))
         }
@@ -148,7 +152,9 @@ const ServiceLandingSettings = () => {
                                         control={control}
                                         render={({ field }) => {
                                             const isValidImage = field.value && field.value.startsWith('data:image/')
-                                            return (
+
+                                            
+return (
                                                 <div className='flex flex-col gap-4'>
                                                     <div className='flex items-center gap-4'>
                                                         {isValidImage && <Typography variant='body1' className='font-medium'>Hero Image</Typography>}
@@ -161,8 +167,10 @@ const ServiceLandingSettings = () => {
                                                                 accept='image/*'
                                                                 onChange={async (event) => {
                                                                     const { files } = event.target
+
                                                                     if (files && files.length !== 0) {
                                                                         const base64 = await fileToBase64(files[0])
+
                                                                         field.onChange(base64)
                                                                     }
                                                                 }}

@@ -61,6 +61,7 @@ const PartsCategoryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess, par
     useEffect(() => {
         // Load available parts
         const savedParts = localStorage.getItem('part-descriptions')
+
         if (savedParts) {
             setPartsList(JSON.parse(savedParts))
         }
@@ -93,17 +94,23 @@ const PartsCategoryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess, par
                             updatedAt: timestamp,
                             subcategories: []
                         }
-                        return {
+
+                        
+return {
                             ...cat,
                             subcategories: [...(cat.subcategories || []), newSubcategory]
                         }
                     }
+
                     if (cat.subcategories && cat.subcategories.length > 0) {
                         return { ...cat, subcategories: addSubcategoryRecursive(cat.subcategories) }
                     }
-                    return cat
+
+                    
+return cat
                 })
             }
+
             newCategoryList = addSubcategoryRecursive(savedCategories)
         } else if (dataToEdit) {
             // Editing an existing category (or subcategory - simplified for now to just top level or passed data)
@@ -116,10 +123,13 @@ const PartsCategoryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess, par
                     if (cat.id === dataToEdit.id) {
                         return { ...cat, ...data, updatedAt: timestamp }
                     }
+
                     if (cat.subcategories && cat.subcategories.length > 0) {
                         return { ...cat, subcategories: updateRecursive(cat.subcategories) }
                     }
-                    return cat
+
+                    
+return cat
                 })
             }
 
@@ -132,6 +142,7 @@ const PartsCategoryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess, par
                 updatedAt: timestamp,
                 subcategories: []
             }
+
             newCategoryList = [...savedCategories, newItem]
         }
 
@@ -178,6 +189,7 @@ const PartsCategoryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess, par
                                                 multiple
                                                 options={partsList}
                                                 getOptionLabel={(option) => option.partName}
+
                                                 // Value: map stored IDs back to part objects
                                                 value={partsList.filter((p: any) => (value || []).includes(p.id))}
                                                 onChange={(_, newValue) => {
@@ -231,6 +243,7 @@ const PartsCategoryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess, par
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }

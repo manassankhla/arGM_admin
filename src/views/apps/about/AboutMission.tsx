@@ -36,8 +36,10 @@ const AboutMission = () => {
     // Load data
     useEffect(() => {
         const savedData = localStorage.getItem('about_mission_data')
+
         if (savedData) {
             const parsed = JSON.parse(savedData)
+
             setMissionItems(parsed.missionValues || [])
         }
     }, [])
@@ -45,6 +47,7 @@ const AboutMission = () => {
     const saveData = (newItems: MissionItem[]) => {
         setMissionItems(newItems)
         const dataToSave = { missionValues: newItems }
+
         localStorage.setItem('about_mission_data', JSON.stringify(dataToSave))
     }
 
@@ -60,6 +63,7 @@ const AboutMission = () => {
 
     const handleDelete = (index: number) => {
         const newItems = missionItems.filter((_, i) => i !== index)
+
         saveData(newItems)
     }
 
@@ -67,10 +71,12 @@ const AboutMission = () => {
         const newItem: MissionItem = {
             title: data.title,
             description: data.description,
+
             // image: data.image // Persisting image file obj is not possible in this demo
         }
 
-        let newItems = [...missionItems]
+        const newItems = [...missionItems]
+
         if (editingIndex !== null) {
             newItems[editingIndex] = newItem
         } else {

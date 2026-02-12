@@ -26,8 +26,10 @@ const ChangePasswordDialog = ({ open, handleClose, handleSave }: Props) => {
     const handleSubmit = () => {
         if (!password) {
             setError(true)
-            return
+            
+return
         }
+
         handleSave(password)
         resetForm()
     }

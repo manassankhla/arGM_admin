@@ -97,6 +97,7 @@ const LocationEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props)
                 .toLowerCase()
                 .replace(/[^a-z0-9]+/g, '-')
                 .replace(/(^-|-$)+/g, '')
+
             setValue('slug', generatedSlug)
         }
     }, [locationNameValue, setValue, watch])
@@ -142,6 +143,7 @@ const LocationEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props)
         const timestamp = new Date().toISOString()
 
         let newLocationsList
+
         if (dataToEdit) {
             newLocationsList = savedLocations.map((loc: LocationType) =>
                 loc.id === dataToEdit.id ? { ...loc, ...data, updatedAt: timestamp } : loc
@@ -152,6 +154,7 @@ const LocationEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props)
                 ...data,
                 updatedAt: timestamp
             }
+
             newLocationsList = [...savedLocations, newLocation]
         }
 
@@ -267,6 +270,7 @@ const LocationEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props)
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }
@@ -349,6 +353,7 @@ const LocationEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props)
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }

@@ -38,6 +38,7 @@ const SeoList = () => {
     // Load data
     useEffect(() => {
         const savedData = localStorage.getItem('seo_data')
+
         if (savedData) {
             setItems(JSON.parse(savedData))
         }
@@ -60,6 +61,7 @@ const SeoList = () => {
 
     const handleDelete = (index: number) => {
         const newItems = items.filter((_, i) => i !== index)
+
         saveData(newItems)
     }
 
@@ -71,7 +73,8 @@ const SeoList = () => {
             keywords: data.keywords
         }
 
-        let newItems = [...items]
+        const newItems = [...items]
+
         if (editingIndex !== null) {
             newItems[editingIndex] = newItem
         } else {

@@ -51,6 +51,7 @@ const BlogList = () => {
 
     const fetchPosts = () => {
         const savedPosts = localStorage.getItem('blog-posts')
+
         if (savedPosts) {
             setPosts(JSON.parse(savedPosts))
         }
@@ -63,6 +64,7 @@ const BlogList = () => {
     const handleDelete = (id: string) => {
         if (confirm('Are you sure you want to delete this post?')) {
             const updatedPosts = posts.filter(post => post.id !== id)
+
             setPosts(updatedPosts)
             localStorage.setItem('blog-posts', JSON.stringify(updatedPosts))
         }

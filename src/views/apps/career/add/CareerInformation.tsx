@@ -119,7 +119,9 @@ const EditorToolbar = ({ editor }: { editor: Editor | null }) => {
 
 // React Imports
 import { useEffect, useState } from 'react'
+
 import type { CareerType } from '@/types/apps/ecommerceTypes'
+
 import { useRouter } from 'next/navigation'
 
 const ProductInformation = ({ careerData }: { careerData?: CareerType }) => {
@@ -146,6 +148,7 @@ const ProductInformation = ({ careerData }: { careerData?: CareerType }) => {
     if (savedCategories) {
       setCategories(JSON.parse(savedCategories))
     }
+
     if (savedJobTypes) {
       setJobTypes(JSON.parse(savedJobTypes))
     }
@@ -164,6 +167,7 @@ const ProductInformation = ({ careerData }: { careerData?: CareerType }) => {
         category: careerData.category,
         jobType: careerData.jobType
       })
+
       // If editing, we might want to load the PDF if it was saved (assuming careerData has it)
       // For now, we'll start with empty PDF on edit unless we update the type
     }
@@ -191,16 +195,21 @@ const ProductInformation = ({ careerData }: { careerData?: CareerType }) => {
   // Handle file upload
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0]
+
     if (file) {
       if (file.type !== 'application/pdf') {
         alert('Please upload a PDF file.')
-        return
+        
+return
       }
+
       setPdfFileName(file.name)
       const reader = new FileReader()
+
       reader.onloadend = () => {
         setPdfFile(reader.result as string)
       }
+
       reader.readAsDataURL(file)
     }
   }
@@ -209,7 +218,8 @@ const ProductInformation = ({ careerData }: { careerData?: CareerType }) => {
   const handleSave = () => {
     if (!formData.jobTitle) {
       alert('Job Title is required')
-      return
+      
+return
     }
 
     const newJob = {
@@ -224,6 +234,7 @@ const ProductInformation = ({ careerData }: { careerData?: CareerType }) => {
     const existingJobs = JSON.parse(localStorage.getItem('career-list') || '[]')
 
     let updatedJobs
+
     if (careerData?.id) {
       // Update existing
       updatedJobs = existingJobs.map((job: any) => job.id === careerData.id ? newJob : job)

@@ -43,8 +43,10 @@ const HomeProductsSection = () => {
 
     useEffect(() => {
         const savedData = localStorage.getItem('home_products_data')
+
         if (savedData) {
             const parsed = JSON.parse(savedData)
+
             reset({
                 isVisible: parsed.isVisible !== undefined ? parsed.isVisible : true,
                 title: parsed.title || '',

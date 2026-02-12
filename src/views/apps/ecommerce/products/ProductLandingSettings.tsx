@@ -1,5 +1,6 @@
 // React Imports
 import { useState, useEffect } from 'react'
+
 import Link from 'next/link'
 
 // MUI Imports
@@ -20,7 +21,8 @@ import DialogContent from '@mui/material/DialogContent'
 import { useForm, Controller, useFieldArray } from 'react-hook-form'
 
 // Local Imports
-import PartsRelated, { RelatedContentData } from '../../parts/PartsRelated'
+import type { RelatedContentData } from '../../parts/PartsRelated';
+import PartsRelated from '../../parts/PartsRelated'
 
 type FormData = {
     heroTitle: string
@@ -29,9 +31,11 @@ type FormData = {
     heroCtaLink: string
     secondSectionHeading: string
     secondSectionParagraph: string
+
     // Metadata
     metaTitle: string
     metaDescription: string
+
     // Project Details
     area: string
     budget: string
@@ -43,18 +47,22 @@ type FormData = {
         question: string
         answer: string
     }[]
+
     // Project Descriptions
     conceptDescription: string
     challengeDescription: string
     solutionDescription: string
     visionDescription: string
+
     // Single Images
     conceptImage: string
     challengeImage: string
     solutionImage: string
+
     // Testimonial
     testimonialText: string
     testimonialAuthor: string
+
     // Galleries
     interiorImages: string[]
     exteriorImages: string[]
@@ -66,6 +74,7 @@ type FormData = {
 const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader()
+
         reader.readAsDataURL(file)
         reader.onload = () => resolve(reader.result as string)
         reader.onerror = (error) => reject(error)
@@ -134,6 +143,7 @@ const ProductLandingSettings = () => {
 
     useEffect(() => {
         const savedData = localStorage.getItem('product-landing-settings')
+
         if (savedData) {
             reset(JSON.parse(savedData))
         }
@@ -201,7 +211,9 @@ const ProductLandingSettings = () => {
                                         control={control}
                                         render={({ field }) => {
                                             const isValidImage = field.value && field.value.startsWith('data:image/')
-                                            return (
+
+                                            
+return (
                                                 <div className='flex flex-col gap-4'>
                                                     <div className='flex items-center gap-4'>
                                                         {isValidImage && <Typography variant='body2' className='font-medium'>Hero Image</Typography>}
@@ -214,8 +226,10 @@ const ProductLandingSettings = () => {
                                                                 accept='image/*'
                                                                 onChange={async (event) => {
                                                                     const { files } = event.target
+
                                                                     if (files && files.length !== 0) {
                                                                         const base64 = await fileToBase64(files[0])
+
                                                                         field.onChange(base64)
                                                                     }
                                                                 }}
@@ -445,6 +459,7 @@ const ProductLandingSettings = () => {
 
                                                             // Find the end of the current line
                                                             let lineEnd = text.indexOf('\n', cursorPosition)
+
                                                             if (lineEnd === -1) lineEnd = text.length
 
                                                             const textBeforeLineEnd = text.substring(0, lineEnd)
@@ -459,9 +474,11 @@ const ProductLandingSettings = () => {
                                                     }}
                                                     onChange={(e) => {
                                                         let value = e.target.value
+
                                                         if (value && !value.startsWith('• ')) {
                                                             value = '• ' + value
                                                         }
+
                                                         field.onChange(value)
                                                     }}
                                                 />
@@ -472,7 +489,9 @@ const ProductLandingSettings = () => {
                                             control={control}
                                             render={({ field }) => {
                                                 const isValidImage = field.value && field.value.startsWith('data:image/')
-                                                return (
+
+                                                
+return (
                                                     <div className='flex flex-col gap-4'>
                                                         <div className='flex items-center gap-4'>
                                                             {isValidImage && <Typography variant='body2' className='font-medium'>Concept Image</Typography>}
@@ -485,8 +504,10 @@ const ProductLandingSettings = () => {
                                                                     accept='image/*'
                                                                     onChange={async (event) => {
                                                                         const { files } = event.target
+
                                                                         if (files && files.length !== 0) {
                                                                             const base64 = await fileToBase64(files[0])
+
                                                                             field.onChange(base64)
                                                                         }
                                                                     }}
@@ -546,6 +567,7 @@ const ProductLandingSettings = () => {
 
                                                             // Find the end of the current line
                                                             let lineEnd = text.indexOf('\n', cursorPosition)
+
                                                             if (lineEnd === -1) lineEnd = text.length
 
                                                             const textBeforeLineEnd = text.substring(0, lineEnd)
@@ -560,9 +582,11 @@ const ProductLandingSettings = () => {
                                                     }}
                                                     onChange={(e) => {
                                                         let value = e.target.value
+
                                                         if (value && !value.startsWith('• ')) {
                                                             value = '• ' + value
                                                         }
+
                                                         field.onChange(value)
                                                     }}
                                                 />
@@ -573,7 +597,9 @@ const ProductLandingSettings = () => {
                                             control={control}
                                             render={({ field }) => {
                                                 const isValidImage = field.value && field.value.startsWith('data:image/')
-                                                return (
+
+                                                
+return (
                                                     <div className='flex flex-col gap-4'>
                                                         <div className='flex items-center gap-4'>
                                                             {isValidImage && <Typography variant='body2' className='font-medium'>Challenge Image</Typography>}
@@ -586,8 +612,10 @@ const ProductLandingSettings = () => {
                                                                     accept='image/*'
                                                                     onChange={async (event) => {
                                                                         const { files } = event.target
+
                                                                         if (files && files.length !== 0) {
                                                                             const base64 = await fileToBase64(files[0])
+
                                                                             field.onChange(base64)
                                                                         }
                                                                     }}
@@ -649,6 +677,7 @@ const ProductLandingSettings = () => {
 
                                                             // Find the end of the current line
                                                             let lineEnd = text.indexOf('\n', cursorPosition)
+
                                                             if (lineEnd === -1) lineEnd = text.length
 
                                                             const textBeforeLineEnd = text.substring(0, lineEnd)
@@ -663,9 +692,11 @@ const ProductLandingSettings = () => {
                                                     }}
                                                     onChange={(e) => {
                                                         let value = e.target.value
+
                                                         if (value && !value.startsWith('• ')) {
                                                             value = '• ' + value
                                                         }
+
                                                         field.onChange(value)
                                                     }}
                                                 />
@@ -676,7 +707,9 @@ const ProductLandingSettings = () => {
                                             control={control}
                                             render={({ field }) => {
                                                 const isValidImage = field.value && field.value.startsWith('data:image/')
-                                                return (
+
+                                                
+return (
                                                     <div className='flex flex-col gap-4'>
                                                         <div className='flex items-center gap-4'>
                                                             {isValidImage && <Typography variant='body2' className='font-medium'>Solution Image</Typography>}
@@ -689,8 +722,10 @@ const ProductLandingSettings = () => {
                                                                     accept='image/*'
                                                                     onChange={async (event) => {
                                                                         const { files } = event.target
+
                                                                         if (files && files.length !== 0) {
                                                                             const base64 = await fileToBase64(files[0])
+
                                                                             field.onChange(base64)
                                                                         }
                                                                     }}
@@ -778,6 +813,7 @@ const ProductLandingSettings = () => {
                                                                     className='absolute -block-2 -inline-end-2 bg-background-paper shadow-md'
                                                                     onClick={() => {
                                                                         const newImages = [...field.value]
+
                                                                         newImages.splice(index, 1)
                                                                         field.onChange(newImages)
                                                                     }}
@@ -797,10 +833,12 @@ const ProductLandingSettings = () => {
                                                             multiple
                                                             onChange={async (event) => {
                                                                 const { files } = event.target
+
                                                                 if (files && files.length !== 0) {
                                                                     const newImages = await Promise.all(
                                                                         Array.from(files).map((file) => fileToBase64(file))
                                                                     )
+
                                                                     field.onChange([...field.value, ...newImages])
                                                                 }
                                                             }}

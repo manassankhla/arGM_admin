@@ -76,7 +76,7 @@ const EditBlog = () => {
         control,
         handleSubmit,
         reset,
-        watch,
+
         setValue,
         formState: { errors }
     } = useForm<FormValues>({
@@ -101,8 +101,11 @@ const EditBlog = () => {
     // Load saved data from localStorage on mount
     useEffect(() => {
         const savedData = localStorage.getItem('blog-edit-data')
+
         if (savedData) {
             const parsedData = JSON.parse(savedData)
+
+
             // Merge saved data with default structure to ensure new fields exist
             reset({
                 heroTitle: parsedData.heroTitle || 'Welcome to Our Blog',
@@ -209,6 +212,7 @@ const EditBlog = () => {
                                                                 accept='image/*'
                                                                 onChange={(event) => {
                                                                     const { files } = event.target
+
                                                                     if (files && files.length !== 0) {
                                                                         field.onChange(files[0].name)
                                                                     }
@@ -326,6 +330,7 @@ const EditBlog = () => {
                                                                             size='small'
                                                                             onDelete={() => {
                                                                                 const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                                 field.onChange(newValue)
                                                                             }}
                                                                             onMouseDown={(event) => event.stopPropagation()}
@@ -335,6 +340,7 @@ const EditBlog = () => {
                                                             )}
                                                             onChange={(e) => {
                                                                 const value = e.target.value as string[]
+
                                                                 if (value.length <= 2) {
                                                                     field.onChange(value)
                                                                 }
@@ -380,6 +386,7 @@ const EditBlog = () => {
                                                                                 size='small'
                                                                                 onDelete={() => {
                                                                                     const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                                     field.onChange(newValue)
                                                                                 }}
                                                                                 onMouseDown={(event) => event.stopPropagation()}
@@ -420,6 +427,7 @@ const EditBlog = () => {
                                                                                 size='small'
                                                                                 onDelete={() => {
                                                                                     const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                                     field.onChange(newValue)
                                                                                 }}
                                                                                 onMouseDown={(event) => event.stopPropagation()}
@@ -460,6 +468,7 @@ const EditBlog = () => {
                                                                                 size='small'
                                                                                 onDelete={() => {
                                                                                     const newValue = (selected as string[]).filter((item) => item !== value)
+
                                                                                     field.onChange(newValue)
                                                                                 }}
                                                                                 onMouseDown={(event) => event.stopPropagation()}

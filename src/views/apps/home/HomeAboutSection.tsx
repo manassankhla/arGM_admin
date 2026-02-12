@@ -51,8 +51,10 @@ const HomeAboutSection = () => {
     // Load data
     useEffect(() => {
         const savedData = localStorage.getItem('home_about_data')
+
         if (savedData) {
             const parsed = JSON.parse(savedData)
+
             reset({
                 isVisible: parsed.isVisible !== undefined ? parsed.isVisible : true,
                 title: parsed.title || '',
@@ -69,6 +71,7 @@ const HomeAboutSection = () => {
         },
         onDrop: (acceptedFiles: File[]) => {
             const file = acceptedFiles[0]
+
             if (file) {
                 setFiles([Object.assign(file)])
                 setValue('image', file as any)

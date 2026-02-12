@@ -14,12 +14,9 @@ import DialogActions from '@mui/material/DialogActions'
 import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
 import Select from '@mui/material/Select'
-import Chip from '@mui/material/Chip'
+import IconButton from '@mui/material/IconButton'
 import MenuItem from '@mui/material/MenuItem'
 import Typography from '@mui/material/Typography'
-import Switch from '@mui/material/Switch'
-import IconButton from '@mui/material/IconButton'
-import { FormControlLabel } from '@mui/material'
 
 type EditUserInfoData = {
   firstName?: string
@@ -55,8 +52,6 @@ const initialData: EditUserInfoProps['data'] = {
 }
 
 const status = ['Status', 'Active', 'Inactive', 'Suspended']
-
-const languages = ['English', 'Spanish', 'French', 'German', 'Hindi']
 
 const countries = ['Select Country', 'France', 'Russia', 'China', 'UK', 'US']
 
@@ -135,7 +130,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 </Select>
               </FormControl>
             </Grid>
-            
+
             <Grid size={{ xs: 12, sm: 6 }}>
               <TextField
                 fullWidth
@@ -145,7 +140,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 onChange={e => setUserData({ ...userData, contact: e.target.value })}
               />
             </Grid>
-          
+
             <Grid size={{ xs: 12, sm: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Country</InputLabel>
@@ -162,7 +157,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 </Select>
               </FormControl>
             </Grid>
-<Grid size={{ xs: 12, sm: 6 }}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Role</InputLabel>
                 <Select

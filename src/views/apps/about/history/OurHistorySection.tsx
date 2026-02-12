@@ -49,8 +49,10 @@ const OurHistorySection = () => {
     // Load data
     useEffect(() => {
         const savedData = localStorage.getItem('our_history_section_data')
+
         if (savedData) {
             const parsed = JSON.parse(savedData)
+
             reset({ description: parsed.description || '', image: null })
         }
     }, [reset])
@@ -62,6 +64,7 @@ const OurHistorySection = () => {
         },
         onDrop: (acceptedFiles: File[]) => {
             const file = acceptedFiles[0]
+
             if (file) {
                 setFiles([Object.assign(file)])
                 setValue('image', file as any)

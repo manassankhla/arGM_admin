@@ -20,7 +20,7 @@ import type { ProductItemType } from './ProductPageEditor'
 
 // Component Imports
 import ProductPageEditor from './ProductPageEditor'
-import { ProductCategoryType } from '../category/ProductCategoryEditor'
+import type { ProductCategoryType } from '../category/ProductCategoryEditor'
 
 type Props = {
     category: ProductCategoryType
@@ -37,6 +37,7 @@ const CategoryProductsManager = ({ category, onBack }: Props) => {
     useEffect(() => {
         const allProducts = JSON.parse(localStorage.getItem('category-products') || '[]') as ProductItemType[]
         const categoryProducts = allProducts.filter(p => p.categoryId === category.id)
+
         setProducts(categoryProducts)
     }, [category.id, view]) // Reload when view changes (after save)
 
@@ -54,6 +55,7 @@ const CategoryProductsManager = ({ category, onBack }: Props) => {
         if (confirm('Are you sure you want to delete this product?')) {
             const allProducts = JSON.parse(localStorage.getItem('category-products') || '[]') as ProductItemType[]
             const newProducts = allProducts.filter(p => p.id !== id)
+
             localStorage.setItem('category-products', JSON.stringify(newProducts))
 
             // Update local state

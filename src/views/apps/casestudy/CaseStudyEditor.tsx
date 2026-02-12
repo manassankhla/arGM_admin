@@ -22,7 +22,8 @@ import Typography from '@mui/material/Typography'
 import { useForm, Controller } from 'react-hook-form'
 
 // Local Imports
-import CaseStudyRelated, { RelatedContentData } from './CaseStudyRelated'
+import type { RelatedContentData } from './CaseStudyRelated';
+import CaseStudyRelated from './CaseStudyRelated'
 import TextEditor from '@/components/TextEditor'
 
 type FormValues = {
@@ -94,6 +95,7 @@ const CaseStudyEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props
                 .toLowerCase()
                 .replace(/[^a-z0-9]+/g, '-')
                 .replace(/(^-|-$)+/g, '')
+
             setValue('slug', generatedSlug)
         }
     }, [headingValue, setValue, watch])
@@ -137,6 +139,7 @@ const CaseStudyEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props
         }
 
         let newPostsList
+
         if (editId) {
             newPostsList = savedPosts.map((post: any) =>
                 post.id === editId ? { ...post, ...finalData, updatedAt: timestamp } : post
@@ -147,6 +150,7 @@ const CaseStudyEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props
                 ...finalData,
                 updatedAt: timestamp
             }
+
             newPostsList = [...savedPosts, newPost]
         }
 
@@ -157,6 +161,7 @@ const CaseStudyEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props
             if (handleClose) handleClose()
         } else {
             alert(editId ? 'Case Study Updated!' : 'Case Study Created!')
+
             if (!editId) {
                 reset()
             } else {
@@ -250,6 +255,7 @@ const CaseStudyEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }
@@ -362,6 +368,7 @@ const CaseStudyEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }

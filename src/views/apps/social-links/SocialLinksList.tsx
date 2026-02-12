@@ -17,7 +17,7 @@ import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
-import Chip from '@mui/material/Chip'
+
 
 // Component Imports
 import SocialLinksDrawer from './SocialLinksDrawer'
@@ -36,6 +36,7 @@ const SocialLinksList = () => {
     // Load data
     useEffect(() => {
         const savedData = localStorage.getItem('social_links_data')
+
         if (savedData) {
             setItems(JSON.parse(savedData))
         }
@@ -58,11 +59,13 @@ const SocialLinksList = () => {
 
     const handleDelete = (index: number) => {
         const newItems = items.filter((_, i) => i !== index)
+
         saveData(newItems)
     }
 
     const handleDrawerSave = (data: SocialLinkItem) => {
-        let newItems = [...items]
+        const newItems = [...items]
+
         if (editingIndex !== null) {
             newItems[editingIndex] = data
         } else {

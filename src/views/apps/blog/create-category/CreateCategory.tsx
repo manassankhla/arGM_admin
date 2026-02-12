@@ -66,6 +66,7 @@ const CreateCategory = () => {
     // Load Data
     useEffect(() => {
         const savedData = localStorage.getItem('blog-categories')
+
         if (savedData) {
             setCategories(JSON.parse(savedData))
         }
@@ -79,6 +80,7 @@ const CreateCategory = () => {
     // Handle File Upload
     const handleFileUpload = (event: ChangeEvent<HTMLInputElement>) => {
         const { files } = event.target
+
         if (files && files.length !== 0) {
             setFileName(files[0].name)
         }
@@ -101,6 +103,7 @@ const CreateCategory = () => {
         }
 
         let updatedCategories
+
         if (editId) {
             updatedCategories = categories.map(cat => (cat.id === editId ? newCategory : cat))
         } else {
@@ -122,6 +125,7 @@ const CreateCategory = () => {
     const handleDelete = (id: string) => {
         if (confirm('Are you sure you want to delete this category?')) {
             const updatedCategories = categories.filter(cat => cat.id !== id)
+
             saveCategories(updatedCategories)
         }
     }

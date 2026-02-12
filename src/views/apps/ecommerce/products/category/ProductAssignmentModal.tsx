@@ -39,21 +39,25 @@ const ProductAssignmentModal = ({ open, category, onClose, onEditProduct, onCrea
     useEffect(() => {
         if (open) {
             const products = JSON.parse(localStorage.getItem('category-products') || '[]') as ProductItemType[]
+
             setAllProducts(products)
 
             // Pre-select products in this category
             const currentCategoryIds = new Set(products.filter(p => p.categoryId === category.id).map(p => p.id))
+
             setSelectedIds(currentCategoryIds)
         }
     }, [open, category.id])
 
     const handleToggle = (id: string) => {
         const newSelected = new Set(selectedIds)
+
         if (newSelected.has(id)) {
             newSelected.delete(id)
         } else {
             newSelected.add(id)
         }
+
         setSelectedIds(newSelected)
     }
 
@@ -67,7 +71,9 @@ const ProductAssignmentModal = ({ open, category, onClose, onEditProduct, onCrea
                 // Was in this category, but now unselected -> Unassign
                 return { ...p, categoryId: '' }
             }
-            return p
+
+            
+return p
         })
 
         localStorage.setItem('category-products', JSON.stringify(updatedProducts))
@@ -121,7 +127,9 @@ const ProductAssignmentModal = ({ open, category, onClose, onEditProduct, onCrea
                     <List>
                         {filteredProducts.map(product => {
                             const isChecked = selectedIds.has(product.id)
-                            return (
+
+                            
+return (
                                 <ListItem
                                     key={product.id}
                                     dense

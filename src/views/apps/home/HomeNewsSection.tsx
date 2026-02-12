@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -25,6 +26,7 @@ const HomeNewsSection = () => {
 
     useEffect(() => {
         const savedData = localStorage.getItem('home_news_data')
+
         if (savedData) reset(JSON.parse(savedData))
     }, [reset])
 

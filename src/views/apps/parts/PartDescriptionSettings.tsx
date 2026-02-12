@@ -19,7 +19,8 @@ import Typography from '@mui/material/Typography'
 import { useForm, Controller, useFieldArray } from 'react-hook-form'
 
 // Local Imports
-import PartsRelated, { RelatedContentData } from './PartsRelated'
+import type { RelatedContentData } from './PartsRelated';
+import PartsRelated from './PartsRelated'
 
 type DynamicSectionItem = {
     title: string
@@ -88,6 +89,7 @@ const PartDescriptionSettings = ({ handleClose }: Props) => {
 
     useEffect(() => {
         const savedSettings = localStorage.getItem('part-description')
+
         if (savedSettings) {
             reset(JSON.parse(savedSettings))
         }
@@ -136,6 +138,7 @@ const PartDescriptionSettings = ({ handleClose }: Props) => {
                             accept='image/*'
                             onChange={(event) => {
                                 const { files } = event.target
+
                                 if (files && files.length !== 0) {
                                     field.onChange(files[0].name)
                                 }

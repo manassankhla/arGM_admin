@@ -27,9 +27,10 @@ import type { ProductCategoryType } from './ProductCategoryEditor'
 
 // Component Imports
 import ProductCategoryEditor from './ProductCategoryEditor'
+import type { ProductItemType } from '../product/ProductPageEditor';
 import ProductPageEditor from '../product/ProductPageEditor'
 import ProductAssignmentModal from './ProductAssignmentModal'
-import { ProductItemType } from '../product/ProductPageEditor'
+
 
 // Row Component
 const Row = ({
@@ -111,8 +112,10 @@ const ProductCategoryList = () => {
     const loadData = () => {
         // Categories
         const savedData = localStorage.getItem('product-categories')
+
         if (savedData) {
             const parsedData = JSON.parse(savedData)
+
             setData(parsedData)
             setFilteredData(parsedData)
         }
@@ -120,6 +123,7 @@ const ProductCategoryList = () => {
         // Products & Counts
         const savedProducts = JSON.parse(localStorage.getItem('category-products') || '[]') as ProductItemType[]
         const counts: Record<string, number> = {}
+
         savedProducts.forEach(p => {
             if (p.categoryId) {
                 counts[p.categoryId] = (counts[p.categoryId] || 0) + 1
@@ -139,11 +143,13 @@ const ProductCategoryList = () => {
         const result = data.filter(item =>
             item.title.toLowerCase().includes(searchTerm.toLowerCase())
         )
+
         setFilteredData(result)
         setPage(0)
     }, [searchTerm, data])
 
     const handleChangePage = (event: unknown, newPage: number) => setPage(newPage)
+
     const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
         setRowsPerPage(+event.target.value)
         setPage(0)
@@ -196,6 +202,7 @@ const ProductCategoryList = () => {
     const handleDelete = (id: string) => {
         if (confirm('Are you sure you want to delete this category?')) {
             const newData = data.filter(cat => cat.id !== id)
+
             localStorage.setItem('product-categories', JSON.stringify(newData))
             loadData()
         }

@@ -41,6 +41,7 @@ import '@/libs/styles/tiptapEditor.css'
 const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader()
+
         reader.readAsDataURL(file)
         reader.onload = () => resolve(reader.result as string)
         reader.onerror = (error) => reject(error)
@@ -87,6 +88,7 @@ const TiptapEditor = ({ value, onChange }: { value: string; onChange: (content: 
         onUpdate: ({ editor }) => {
             onChange(editor.getHTML())
         },
+
         // Fix for hydration mismatch (if needed, though 'immediatelyRender: false' is clearer)
         immediatelyRender: false
     })
@@ -136,17 +138,20 @@ const WriteBlog = () => {
     useEffect(() => {
         // Load Categories
         const savedCategories = localStorage.getItem('blog-categories')
+
         if (savedCategories) {
             setCategories(JSON.parse(savedCategories))
         }
 
         const savedPosts = JSON.parse(localStorage.getItem('blog-posts') || '[]')
+
         setAllBlogs(savedPosts)
 
         // Load Post if editing
         if (editId) {
             console.log('Saved Posts:', savedPosts) // Debug log
             const postToEdit = savedPosts.find((post: any) => post.id === editId)
+
             console.log('Post to Edit:', postToEdit) // Debug log
 
             if (postToEdit) {
@@ -167,6 +172,7 @@ const WriteBlog = () => {
         const timestamp = new Date().toISOString()
 
         let newPosts
+
         if (editId) {
             // Update existing
             newPosts = savedPosts.map((post: any) =>
@@ -180,11 +186,13 @@ const WriteBlog = () => {
                 publishedAt: timestamp,
                 updatedAt: timestamp
             }
+
             newPosts = [...savedPosts, newPost]
         }
 
         localStorage.setItem('blog-posts', JSON.stringify(newPosts))
         alert(editId ? 'Blog Post Updated!' : 'Blog Post Published!')
+
         if (!editId) {
             reset()
         } else {
@@ -259,7 +267,9 @@ const WriteBlog = () => {
                                                         <div className='flex flex-wrap gap-2'>
                                                             {(selected as string[]).map((value) => {
                                                                 const blog = allBlogs.find((b: any) => b.id === value)
-                                                                return <Chip key={value} label={blog?.blogTitle || value} size='small' />
+
+                                                                
+return <Chip key={value} label={blog?.blogTitle || value} size='small' />
                                                             })}
                                                         </div>
                                                     )}
@@ -282,7 +292,9 @@ const WriteBlog = () => {
                                         control={control}
                                         render={({ field }) => {
                                             const isValidImage = field.value && field.value.startsWith('data:image/')
-                                            return (
+
+                                            
+return (
                                                 <div className='flex flex-col gap-4'>
                                                     <div className='flex items-center gap-4'>
                                                         {isValidImage && <Typography variant='body2' className='font-medium'>Main Image</Typography>}
@@ -295,8 +307,10 @@ const WriteBlog = () => {
                                                                 accept='image/*'
                                                                 onChange={async (event) => {
                                                                     const { files } = event.target
+
                                                                     if (files && files.length !== 0) {
                                                                         const base64 = await fileToBase64(files[0])
+
                                                                         field.onChange(base64)
                                                                     }
                                                                 }}
@@ -410,6 +424,7 @@ const WriteBlog = () => {
                                                     accept='image/*'
                                                     onChange={(event) => {
                                                         const { files } = event.target
+
                                                         if (files && files.length !== 0) {
                                                             setValue(`sections.${index}.imageUrl`, files[0].name)
                                                         }

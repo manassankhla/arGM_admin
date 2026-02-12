@@ -18,7 +18,8 @@ import Divider from '@mui/material/Divider'
 import { useForm, Controller } from 'react-hook-form'
 
 // Local Imports
-import IndustryRelated, { RelatedContentData } from './IndustryRelated'
+import type { RelatedContentData } from './IndustryRelated';
+import IndustryRelated from './IndustryRelated'
 
 type LandingFormValues = {
     heroImage: string
@@ -58,6 +59,7 @@ const IndustryLandingSettings = ({ handleClose }: Props) => {
 
     useEffect(() => {
         const savedSettings = localStorage.getItem('industry-landing')
+
         if (savedSettings) {
             reset(JSON.parse(savedSettings))
         }
@@ -151,6 +153,7 @@ const IndustryLandingSettings = ({ handleClose }: Props) => {
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }

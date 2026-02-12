@@ -152,9 +152,11 @@ const CareerListTable = ({ careerData }: { careerData?: CareerType[] }) => {
 
   useEffect(() => {
     const localData = localStorage.getItem('career-list')
+
     if (localData) {
       try {
         const parsedLocalData = JSON.parse(localData)
+
         // Combine prop data and local data, avoiding duplicates if any logic exists (here simple concat or override)
         // Ideally, we might want to prioritize local data or just show local data if it's the source of truth for this demo
         // Let's prepend local data to show new additions at the top
@@ -221,7 +223,9 @@ const CareerListTable = ({ careerData }: { careerData?: CareerType[] }) => {
         header: 'Status',
         cell: ({ row }) => {
           const status = row.original.status
-          return (
+
+          
+return (
             <div className='flex items-center gap-3'>
               <Chip
                 label={careerStatusObj[status]?.title || status}
@@ -237,12 +241,16 @@ const CareerListTable = ({ careerData }: { careerData?: CareerType[] }) => {
                     ? { ...item, status: item.status === 'Active' ? 'Inactive' : 'Active' }
                     : item
                 )
+
                 setData(updatedData)
+
                 // Also update local storage if it exists there
                 const localData = localStorage.getItem('career-list')
+
                 if (localData) {
                   const parsed = JSON.parse(localData)
                   const updatedLocal = parsed.map((item: any) => item.id === row.original.id ? { ...item, status: item.status === 'Active' ? 'Inactive' : 'Active' } : item)
+
                   localStorage.setItem('career-list', JSON.stringify(updatedLocal))
                 }
               }} />
@@ -258,6 +266,7 @@ const CareerListTable = ({ careerData }: { careerData?: CareerType[] }) => {
               <IconButton size='small' color='primary' onClick={() => {
                 // Create a link and click it to download
                 const link = document.createElement('a');
+
                 link.href = row.original.pdfFile || '';
                 link.download = row.original.pdfFileName || 'job-description.pdf';
                 document.body.appendChild(link);
@@ -280,12 +289,16 @@ const CareerListTable = ({ careerData }: { careerData?: CareerType[] }) => {
                   menuItemProps: {
                     onClick: () => {
                       const newData = data?.filter(career => career.id !== row.original.id)
+
                       setData(newData)
+
                       // Update local storage
                       const localData = localStorage.getItem('career-list')
+
                       if (localData) {
                         const parsed = JSON.parse(localData)
                         const updatedLocal = parsed.filter((item: any) => item.id !== row.original.id)
+
                         localStorage.setItem('career-list', JSON.stringify(updatedLocal))
                       }
                     }

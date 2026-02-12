@@ -40,21 +40,25 @@ const ServiceAssignmentModal = ({ open, category, onClose, onEditService, onCrea
     useEffect(() => {
         if (open) {
             const services = JSON.parse(localStorage.getItem('category-services') || '[]') as ServiceItemType[]
+
             setAllServices(services)
 
             // Pre-select services in this category
             const currentCategoryIds = new Set(services.filter(s => s.categoryId === category.id).map(s => s.id))
+
             setSelectedIds(currentCategoryIds)
         }
     }, [open, category.id])
 
     const handleToggle = (id: string) => {
         const newSelected = new Set(selectedIds)
+
         if (newSelected.has(id)) {
             newSelected.delete(id)
         } else {
             newSelected.add(id)
         }
+
         setSelectedIds(newSelected)
     }
 
@@ -68,7 +72,9 @@ const ServiceAssignmentModal = ({ open, category, onClose, onEditService, onCrea
                 // Was in this category, but now unselected -> Unassign
                 return { ...s, categoryId: '' }
             }
-            return s
+
+            
+return s
         })
 
         localStorage.setItem('category-services', JSON.stringify(updatedServices))
@@ -122,7 +128,9 @@ const ServiceAssignmentModal = ({ open, category, onClose, onEditService, onCrea
                     <List>
                         {filteredServices.map(service => {
                             const isChecked = selectedIds.has(service.id)
-                            return (
+
+                            
+return (
                                 <ListItem
                                     key={service.id}
                                     dense

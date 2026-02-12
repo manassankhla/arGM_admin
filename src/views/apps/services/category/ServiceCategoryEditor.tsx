@@ -20,7 +20,8 @@ import { useForm, Controller } from 'react-hook-form'
 import { useDropzone } from 'react-dropzone'
 
 // Component Imports
-import ServiceRelated, { RelatedContentData } from '../ServiceRelated'
+import type { RelatedContentData } from '../ServiceRelated';
+import ServiceRelated from '../ServiceRelated'
 import AppReactDropzone from '@/libs/styles/AppReactDropzone'
 
 
@@ -43,13 +44,16 @@ type FormValues = {
     title: string
     shortDescription: string
     image: string
+
     // Hero Section
     heroTitle: string
     cardSubheading: string
     heroSubheading: string
+
     // Intro Section
     introTitle: string
     introDescription: string
+
     // Related
     relatedContent: RelatedContentData
 }
@@ -106,14 +110,17 @@ const ServiceCategoryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }:
         },
         onDrop: (acceptedFiles: File[]) => {
             const file = acceptedFiles[0]
+
             if (file) {
                 setFiles([file])
                 const reader = new FileReader()
+
                 reader.onload = (e) => {
                     if (e.target?.result) {
                         setValue('image', e.target.result as string)
                     }
                 }
+
                 reader.readAsDataURL(file)
             }
         }
@@ -159,6 +166,7 @@ const ServiceCategoryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }:
                 ...data,
                 updatedAt: timestamp
             }
+
             newCategoryList = [...savedCategories, newItem]
         }
 

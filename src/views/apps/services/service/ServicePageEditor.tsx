@@ -20,7 +20,8 @@ import { useForm, Controller, useFieldArray } from 'react-hook-form'
 
 // Component Imports
 import TextEditor from '@components/TextEditor'
-import ServiceRelated, { RelatedContentData } from '../ServiceRelated'
+import type { RelatedContentData } from '../ServiceRelated';
+import ServiceRelated from '../ServiceRelated'
 
 export type ServiceDetailSection = {
     title: string
@@ -290,6 +291,7 @@ const ServicePageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }
@@ -334,6 +336,7 @@ const ServicePageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }
@@ -378,6 +381,7 @@ const ServicePageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }
@@ -501,6 +505,7 @@ const ServicePageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }
@@ -658,6 +663,7 @@ const ServicePageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                                     accept='image/*'
                                                                     onChange={(event) => {
                                                                         const { files } = event.target
+
                                                                         if (files && files.length !== 0) {
                                                                             field.onChange(files[0].name)
                                                                         }
@@ -727,6 +733,7 @@ const ServicePageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }

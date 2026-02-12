@@ -19,7 +19,8 @@ import Typography from '@mui/material/Typography'
 import { useForm, Controller, useFieldArray } from 'react-hook-form'
 
 // Local Imports
-import IndustryRelated, { RelatedContentData } from './IndustryRelated'
+import type { RelatedContentData } from './IndustryRelated';
+import IndustryRelated from './IndustryRelated'
 import TextEditor from '@/components/TextEditor'
 
 type DynamicSection = {
@@ -89,6 +90,7 @@ const IndustryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props)
                 .toLowerCase()
                 .replace(/[^a-z0-9]+/g, '-')
                 .replace(/(^-|-$)+/g, '')
+
             setValue('slug', generatedSlug)
         }
     }, [titleValue, setValue, watch])
@@ -117,6 +119,7 @@ const IndustryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props)
         const timestamp = new Date().toISOString()
 
         let newIndustryList
+
         if (dataToEdit) {
             newIndustryList = savedIndustries.map((item: IndustryType) =>
                 item.id === dataToEdit.id ? { ...item, ...data, updatedAt: timestamp } : item
@@ -127,6 +130,7 @@ const IndustryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props)
                 ...data,
                 updatedAt: timestamp
             }
+
             newIndustryList = [...savedIndustries, newItem]
         }
 
@@ -221,6 +225,7 @@ const IndustryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props)
                                                         accept='image/*'
                                                         onChange={(event) => {
                                                             const { files } = event.target
+
                                                             if (files && files.length !== 0) {
                                                                 field.onChange(files[0].name)
                                                             }
@@ -303,6 +308,7 @@ const IndustryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }: Props)
                                                                     accept='image/*'
                                                                     onChange={(event) => {
                                                                         const { files } = event.target
+
                                                                         if (files && files.length !== 0) {
                                                                             field.onChange(files[0].name)
                                                                         }

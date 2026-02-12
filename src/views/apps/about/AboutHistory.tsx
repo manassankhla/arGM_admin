@@ -38,8 +38,10 @@ const AboutHistory = () => {
     // Load data
     useEffect(() => {
         const savedData = localStorage.getItem('about_history_data')
+
         if (savedData) {
             const parsed = JSON.parse(savedData)
+
             setHistoryItems(parsed.historyValues || [])
         }
     }, [])
@@ -47,6 +49,7 @@ const AboutHistory = () => {
     const saveData = (newItems: HistoryItem[]) => {
         setHistoryItems(newItems)
         const dataToSave = { historyValues: newItems }
+
         localStorage.setItem('about_history_data', JSON.stringify(dataToSave))
     }
 
@@ -62,6 +65,7 @@ const AboutHistory = () => {
 
     const handleDelete = (index: number) => {
         const newItems = historyItems.filter((_, i) => i !== index)
+
         saveData(newItems)
     }
 
@@ -70,10 +74,12 @@ const AboutHistory = () => {
             heading: data.heading,
             text: data.text,
             link: data.link
+
             // image omitted
         }
 
-        let newItems = [...historyItems]
+        const newItems = [...historyItems]
+
         if (editingIndex !== null) {
             newItems[editingIndex] = newItem
         } else {

@@ -61,8 +61,11 @@ const AboutHero = () => {
     // Load data from LocalStorage on mount
     useEffect(() => {
         const savedData = localStorage.getItem('about_hero_data')
+
         if (savedData) {
             const parsed = JSON.parse(savedData)
+
+
             // Reset form with saved string data
             // Note: We cannot restore the File object for the image from localStorage
             reset({
@@ -81,6 +84,7 @@ const AboutHero = () => {
         },
         onDrop: (acceptedFiles: File[]) => {
             const file = acceptedFiles[0]
+
             if (file) {
                 setFiles([Object.assign(file)])
                 setValue('heroImage', file)
@@ -108,6 +112,7 @@ const AboutHero = () => {
             heroSubtitle: data.heroSubtitle,
             heroBtnText: data.heroBtnText
         }
+
         localStorage.setItem('about_hero_data', JSON.stringify(dataToSave))
 
         console.log('Hero Section Saved:', data)

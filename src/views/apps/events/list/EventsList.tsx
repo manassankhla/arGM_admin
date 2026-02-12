@@ -47,6 +47,7 @@ const EventsList = () => {
 
     const fetchEvents = () => {
         const savedEvents = JSON.parse(localStorage.getItem('events-posts') || '[]')
+
         setEvents(savedEvents)
     }
 
@@ -62,6 +63,7 @@ const EventsList = () => {
     const handleDelete = (id: string) => {
         if (confirm('Are you sure you want to delete this event?')) {
             const updatedEvents = events.filter(item => item.id !== id)
+
             localStorage.setItem('events-posts', JSON.stringify(updatedEvents))
             setEvents(updatedEvents)
         }
@@ -91,7 +93,9 @@ const EventsList = () => {
     // Filter and Pagination Logic
     const filteredEvents = events.filter((item) => {
         const term = searchTerm.toLowerCase()
-        return (
+
+        
+return (
             item.heading.toLowerCase().includes(term) ||
             item.category.toLowerCase().includes(term) ||
             (item.location && item.location.toLowerCase().includes(term))

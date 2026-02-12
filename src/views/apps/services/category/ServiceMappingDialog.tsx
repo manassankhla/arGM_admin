@@ -41,12 +41,14 @@ const ServiceMappingDialog = ({ open, onClose, categoryId, onSave }: Props) => {
     useEffect(() => {
         if (open) {
             const allServices = JSON.parse(localStorage.getItem('category-services') || '[]') as ServiceItemType[]
+
             setServices(allServices)
 
             // Pre-select services that are already in this category
             const currentCategoryServices = allServices
                 .filter(s => s.categoryId === categoryId)
                 .map(s => s.id)
+
             setChecked(currentCategoryServices)
         }
     }, [open, categoryId])
@@ -76,7 +78,9 @@ const ServiceMappingDialog = ({ open, onClose, categoryId, onSave }: Props) => {
                 // If was in this category but now unchecked, remove from category (set to empty)
                 return { ...service, categoryId: '' }
             }
-            return service
+
+            
+return service
         })
 
         localStorage.setItem('category-services', JSON.stringify(updatedServices))

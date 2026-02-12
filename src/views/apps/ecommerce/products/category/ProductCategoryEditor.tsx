@@ -20,7 +20,8 @@ import { useForm, Controller } from 'react-hook-form'
 import { useDropzone } from 'react-dropzone'
 
 // Component Imports
-import PartsRelated, { RelatedContentData } from '../../../parts/PartsRelated'
+import type { RelatedContentData } from '../../../parts/PartsRelated';
+import PartsRelated from '../../../parts/PartsRelated'
 import AppReactDropzone from '@/libs/styles/AppReactDropzone'
 
 // Styled Dropzone
@@ -42,12 +43,15 @@ type FormValues = {
     title: string
     shortDescription: string
     image: string
+
     // Hero Section
     heroTitle: string
     heroImage: string
+
     // Intro Section
     introTitle: string
     introDescription: string
+
     // Related
     relatedContent: RelatedContentData
 }
@@ -103,14 +107,17 @@ const ProductCategoryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }:
         },
         onDrop: (acceptedFiles: File[]) => {
             const file = acceptedFiles[0]
+
             if (file) {
                 setFiles([file])
                 const reader = new FileReader()
+
                 reader.onload = (e) => {
                     if (e.target?.result) {
                         setValue('image', e.target.result as string)
                     }
                 }
+
                 reader.readAsDataURL(file)
             }
         }
@@ -155,6 +162,7 @@ const ProductCategoryEditor = ({ isDrawer, handleClose, dataToEdit, onSuccess }:
                 ...data,
                 updatedAt: timestamp
             }
+
             newCategoryList = [...savedCategories, newItem]
         }
 

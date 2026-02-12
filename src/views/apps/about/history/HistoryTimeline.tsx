@@ -38,8 +38,10 @@ const HistoryTimeline = () => {
     // Load data
     useEffect(() => {
         const savedData = localStorage.getItem('history_timeline_data')
+
         if (savedData) {
             const parsed = JSON.parse(savedData)
+
             setTimelineItems(parsed.timelineValues || [])
         }
     }, [])
@@ -61,6 +63,7 @@ const HistoryTimeline = () => {
 
     const handleDelete = (index: number) => {
         const newItems = timelineItems.filter((_, i) => i !== index)
+
         saveData(newItems)
     }
 
@@ -69,10 +72,12 @@ const HistoryTimeline = () => {
             year: data.year,
             title: data.title,
             text: data.text
+
             // image omitted
         }
 
-        let newItems = [...timelineItems]
+        const newItems = [...timelineItems]
+
         if (editingIndex !== null) {
             newItems[editingIndex] = newItem
         } else {

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+
 import Link from 'next/link'
 
 import Card from '@mui/material/Card'
@@ -47,6 +48,7 @@ const NewsList = () => {
 
     const fetchNews = () => {
         const savedNews = JSON.parse(localStorage.getItem('news-posts') || '[]')
+
         setNews(savedNews)
     }
 
@@ -62,6 +64,7 @@ const NewsList = () => {
     const handleDelete = (id: string) => {
         if (confirm('Are you sure you want to delete this news?')) {
             const updatedNews = news.filter(item => item.id !== id)
+
             localStorage.setItem('news-posts', JSON.stringify(updatedNews))
             setNews(updatedNews)
         }
@@ -91,7 +94,9 @@ const NewsList = () => {
     // Filter and Pagination Logic
     const filteredNews = news.filter((item) => {
         const term = searchTerm.toLowerCase()
-        return (
+
+        
+return (
             item.newsHeadline.toLowerCase().includes(term) ||
             item.category.toLowerCase().includes(term)
         )

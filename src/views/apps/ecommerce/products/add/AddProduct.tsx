@@ -4,7 +4,8 @@
 import { useRouter } from 'next/navigation'
 
 // Component Imports
-import ProductPageEditor, { ProductItemType } from '../product/ProductPageEditor'
+import type { ProductItemType } from '../product/ProductPageEditor';
+import ProductPageEditor from '../product/ProductPageEditor'
 
 const AddProduct = () => {
     const router = useRouter()

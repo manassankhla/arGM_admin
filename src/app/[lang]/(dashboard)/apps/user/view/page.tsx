@@ -1,36 +1,20 @@
 // React Imports
-import type { ReactElement } from 'react'
+
 
 // Next Imports
-import dynamic from 'next/dynamic'
+
 
 // MUI Imports
 import Grid from '@mui/material/Grid2'
 
 // Type Imports
-import type { PricingPlanType } from '@/types/pages/pricingTypes'
+
 
 // Component Imports
 import UserLeftOverview from '@views/apps/user/view/user-left-overview'
-import UserRight from '@views/apps/user/view/user-right'
 
 // Data Imports
-import { getPricingData } from '@/app/server/actions'
 
-const OverViewTab = dynamic(() => import('@views/apps/user/view/user-right/overview'))
-const SecurityTab = dynamic(() => import('@views/apps/user/view/user-right/security'))
-const BillingPlans = dynamic(() => import('@views/apps/user/view/user-right/billing-plans'))
-const NotificationsTab = dynamic(() => import('@views/apps/user/view/user-right/notifications'))
-const ConnectionsTab = dynamic(() => import('@views/apps/user/view/user-right/connections'))
-
-// Vars
-const tabContentList = (data?: PricingPlanType[]): { [key: string]: ReactElement } => ({
-  overview: <OverViewTab />,
-  security: <SecurityTab />,
-  'billing-plans': <BillingPlans data={data} />,
-  notifications: <NotificationsTab />,
-  connections: <ConnectionsTab />
-})
 
 /**
  * ! If you need data using an API call, uncomment the below API code, update the `process.env.API_URL` variable in the
@@ -52,14 +36,13 @@ const tabContentList = (data?: PricingPlanType[]): { [key: string]: ReactElement
 
 const UserViewTab = async () => {
   // Vars
-  const data = await getPricingData()
 
   return (
     <Grid container spacing={6}>
       <Grid size={{ xs: 12, lg: 12, md: 12 }}>
         <UserLeftOverview />
       </Grid>
-      
+
     </Grid>
   )
 }

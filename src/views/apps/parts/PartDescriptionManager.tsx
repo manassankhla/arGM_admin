@@ -19,7 +19,8 @@ import IconButton from '@mui/material/IconButton'
 import Paper from '@mui/material/Paper'
 
 // Local Imports
-import PartDescriptionEditor, { PartDescriptionType } from './PartDescriptionEditor'
+import type { PartDescriptionType } from './PartDescriptionEditor';
+import PartDescriptionEditor from './PartDescriptionEditor'
 
 const PartDescriptionManager = () => {
     // State
@@ -30,6 +31,7 @@ const PartDescriptionManager = () => {
     // Load parts from localStorage
     useEffect(() => {
         const savedParts = localStorage.getItem('part-descriptions')
+
         if (savedParts) {
             setPartsList(JSON.parse(savedParts))
         }
@@ -37,12 +39,14 @@ const PartDescriptionManager = () => {
 
     const handleSavePart = (data: PartDescriptionType) => {
         let updatedList = [...partsList]
+
         if (data.id) {
             // Update existing
             updatedList = updatedList.map(part => part.id === data.id ? { ...data, updatedAt: new Date().toISOString() } : part)
         } else {
             // Add new
             const newPart = { ...data, id: Date.now().toString(), updatedAt: new Date().toISOString() }
+
             updatedList.push(newPart)
         }
 
@@ -55,6 +59,7 @@ const PartDescriptionManager = () => {
     const handleDeletePart = (id: string) => {
         if (confirm('Are you sure you want to delete this part?')) {
             const updatedList = partsList.filter(part => part.id !== id)
+
             setPartsList(updatedList)
             localStorage.setItem('part-descriptions', JSON.stringify(updatedList))
         }

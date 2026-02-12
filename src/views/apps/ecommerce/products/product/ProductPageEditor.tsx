@@ -24,12 +24,14 @@ import { useForm, Controller, useFieldArray } from 'react-hook-form'
 
 // Component Imports
 import TextEditor from '@components/TextEditor'
-import PartsRelated, { RelatedContentData } from '../../../parts/PartsRelated'
+import type { RelatedContentData } from '../../../parts/PartsRelated';
+import PartsRelated from '../../../parts/PartsRelated'
 
 // Helper
 const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader()
+
         reader.readAsDataURL(file)
         reader.onload = () => resolve(reader.result as string)
         reader.onerror = (error) => reject(error)
@@ -41,6 +43,7 @@ export type ProductItemType = {
     categoryId: string
     title: string
     shortDescription: string
+
     // Hero
     heroTitle: string
     heroImage: string
@@ -48,9 +51,11 @@ export type ProductItemType = {
     heroCtaLink: string
     secondSectionHeading: string
     secondSectionParagraph: string
+
     // Metadata
     metaTitle: string
     metaDescription: string
+
     // Project Details
     area: string
     budget: string
@@ -62,18 +67,22 @@ export type ProductItemType = {
         question: string
         answer: string
     }[]
+
     // Project Descriptions
     conceptDescription: string
     challengeDescription: string
     solutionDescription: string
     visionDescription: string
+
     // Single Images
     conceptImage: string
     challengeImage: string
     solutionImage: string
+
     // Testimonial
     testimonialText: string
     testimonialAuthor: string
+
     // Galleries
     interiorImages: string[]
     exteriorImages: string[]
@@ -152,8 +161,10 @@ const ProductPageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
 
     useEffect(() => {
         const savedCategories = localStorage.getItem('product-categories')
+
         if (savedCategories) {
             const parsed = JSON.parse(savedCategories)
+
             setCategories(parsed.map((c: any) => ({ id: c.id, title: c.title })))
         }
     }, [])
@@ -372,7 +383,9 @@ const ProductPageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                 control={control}
                                                 render={({ field }) => {
                                                     const isValidImage = field.value && field.value.startsWith('data:image/')
-                                                    return (
+
+                                                    
+return (
                                                         <div className='flex flex-col gap-4'>
                                                             <div className='flex items-center gap-4'>
                                                                 {isValidImage && <Typography variant='body2' className='font-medium'>Hero Image</Typography>}
@@ -385,8 +398,10 @@ const ProductPageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                                         accept='image/*'
                                                                         onChange={async (event) => {
                                                                             const { files } = event.target
+
                                                                             if (files && files.length !== 0) {
                                                                                 const base64 = await fileToBase64(files[0])
+
                                                                                 field.onChange(base64)
                                                                             }
                                                                         }}
@@ -702,8 +717,10 @@ const ProductPageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                                 accept='image/*'
                                                                 onChange={async (event) => {
                                                                     const { files } = event.target
+
                                                                     if (files && files.length > 0) {
                                                                         const newImages = await Promise.all(Array.from(files).map(file => fileToBase64(file)))
+
                                                                         field.onChange([...(field.value || []), ...newImages])
                                                                     }
                                                                 }}
@@ -719,6 +736,7 @@ const ProductPageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                                         className='absolute -block-2 -inline-end-2 bg-background-paper shadow-md'
                                                                         onClick={() => {
                                                                             const newImages = field.value.filter((_, i) => i !== index)
+
                                                                             field.onChange(newImages)
                                                                         }}
                                                                     >
@@ -749,8 +767,10 @@ const ProductPageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                                 accept='image/*'
                                                                 onChange={async (event) => {
                                                                     const { files } = event.target
+
                                                                     if (files && files.length > 0) {
                                                                         const newImages = await Promise.all(Array.from(files).map(file => fileToBase64(file)))
+
                                                                         field.onChange([...(field.value || []), ...newImages])
                                                                     }
                                                                 }}
@@ -766,6 +786,7 @@ const ProductPageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                                         className='absolute -block-2 -inline-end-2 bg-background-paper shadow-md'
                                                                         onClick={() => {
                                                                             const newImages = field.value.filter((_, i) => i !== index)
+
                                                                             field.onChange(newImages)
                                                                         }}
                                                                     >
@@ -796,8 +817,10 @@ const ProductPageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                                 accept='image/*'
                                                                 onChange={async (event) => {
                                                                     const { files } = event.target
+
                                                                     if (files && files.length > 0) {
                                                                         const newImages = await Promise.all(Array.from(files).map(file => fileToBase64(file)))
+
                                                                         field.onChange([...(field.value || []), ...newImages])
                                                                     }
                                                                 }}
@@ -813,6 +836,7 @@ const ProductPageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                                         className='absolute -block-2 -inline-end-2 bg-background-paper shadow-md'
                                                                         onClick={() => {
                                                                             const newImages = field.value.filter((_, i) => i !== index)
+
                                                                             field.onChange(newImages)
                                                                         }}
                                                                     >
@@ -843,8 +867,10 @@ const ProductPageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                                 accept='image/*'
                                                                 onChange={async (event) => {
                                                                     const { files } = event.target
+
                                                                     if (files && files.length > 0) {
                                                                         const newImages = await Promise.all(Array.from(files).map(file => fileToBase64(file)))
+
                                                                         field.onChange([...(field.value || []), ...newImages])
                                                                     }
                                                                 }}
@@ -860,6 +886,7 @@ const ProductPageEditor = ({ dataToEdit, categoryId, onSave, onCancel }: Props) 
                                                                         className='absolute -block-2 -inline-end-2 bg-background-paper shadow-md'
                                                                         onClick={() => {
                                                                             const newImages = field.value.filter((_, i) => i !== index)
+
                                                                             field.onChange(newImages)
                                                                         }}
                                                                     >

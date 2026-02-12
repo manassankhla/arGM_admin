@@ -14,7 +14,6 @@ import { verticalLayoutClasses } from '@layouts/utils/layoutClasses'
 
 const FooterContent = () => {
   // Hooks
-  const { isBreakpointReached } = useVerticalNav()
 
   return (
     <div
@@ -28,7 +27,7 @@ const FooterContent = () => {
           Beyond Marketing
         </Link>
       </p>
-      
+
     </div>
   )
 }

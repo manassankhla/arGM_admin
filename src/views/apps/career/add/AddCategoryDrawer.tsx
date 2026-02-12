@@ -46,6 +46,7 @@ const AddCategoryDrawer = ({ open, handleClose }: Props) => {
     // Load from localStorage on mount
     useEffect(() => {
         const savedData = localStorage.getItem('career-categories')
+
         if (savedData) {
             setCategories(JSON.parse(savedData))
         } else {
@@ -73,6 +74,7 @@ const AddCategoryDrawer = ({ open, handleClose }: Props) => {
         if (editingId !== null) {
             // Update
             const updatedCategories = categories.map(cat => (cat.id === editingId ? { ...cat, name: categoryName } : cat))
+
             setCategories(updatedCategories)
             setEditingId(null)
         } else {
@@ -81,9 +83,12 @@ const AddCategoryDrawer = ({ open, handleClose }: Props) => {
                 id: Date.now(), // Use timestamp for unique ID
                 name: categoryName
             }
+
             const updatedCategories = [...categories, newCategory]
+
             setCategories(updatedCategories)
         }
+
         setCategoryName('')
     }
 
@@ -94,6 +99,7 @@ const AddCategoryDrawer = ({ open, handleClose }: Props) => {
 
     const handleDelete = (id: number) => {
         const updatedCategories = categories.filter(cat => cat.id !== id)
+
         setCategories(updatedCategories)
     }
 
