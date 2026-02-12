@@ -1,0 +1,88 @@
+﻿   Γû▓ Next.js 15.1.2
+
+   Creating an optimized production build ...
+node.exe : [baseline-
+browser-mapping] The 
+data in this module 
+is over two months 
+old.  To ensure 
+accurate Baseline 
+data, please update: 
+`npm i baseline-brows
+er-mapping@latest -D`
+At C:\Program Files\n
+odejs\npx.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: ([baseli   
+ ne-brows...ping@    
+latest -D`:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+Failed to compile.
+
+./src/app/[lang]/(das
+hboard)/apps/products
+ copy/list/page.tsx
+Module not found: 
+Can't resolve '@/view
+s/apps/ecommerce/prod
+ucts/lists/ProductLis
+tTable'
+
+https://nextjs.org/do
+cs/messages/module-no
+t-found
+
+./src/app/[lang]/(das
+hboard)/apps/products
+ copy/list/page.tsx
+Module not found: 
+Can't resolve '@/view
+s/apps/ecommerce/prod
+ucts/lists/ProductCar
+d'
+
+https://nextjs.org/do
+cs/messages/module-no
+t-found
+
+./src/app/[lang]/(das
+hboard)/apps/products
+/list/page.tsx
+Module not found: 
+Can't resolve '@/view
+s/apps/ecommerce/prod
+ucts/lists/ProductLis
+tTable'
+
+https://nextjs.org/do
+cs/messages/module-no
+t-found
+
+./src/app/[lang]/(das
+hboard)/apps/products
+/list/page.tsx
+Module not found: 
+Can't resolve '@/view
+s/apps/ecommerce/prod
+ucts/lists/ProductCar
+d'
+
+https://nextjs.org/do
+cs/messages/module-no
+t-found
+
+
+> Build failed 
+because of webpack 
+errors

@@ -1,0 +1,87 @@
+﻿   Γû▓ Next.js 15.1.2
+
+   Creating an optimized production build ...
+node.exe : Failed to 
+compile.
+At C:\Program Files\n
+odejs\npx.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (Failed    
+ to compile.:Stri    
+ng) [], RemoteEx    
+ception
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+
+./src/app/[lang]/(das
+hboard)/apps/invoice/
+list/page.tsx
+Module not found: 
+Can't resolve '@views
+/apps/invoice/list'
+
+https://nextjs.org/do
+cs/messages/module-no
+t-found
+
+./src/app/[lang]/(das
+hboard)/apps/invoice/
+preview/[id]/page.tsx
+Module not found: 
+Can't resolve '@views
+/apps/invoice/preview
+'
+
+https://nextjs.org/do
+cs/messages/module-no
+t-found
+
+./src/app/[lang]/(das
+hboard)/apps/kanban/p
+age.tsx
+Module not found: 
+Can't resolve '@views
+/apps/kanban/KanbanBo
+ard'
+
+https://nextjs.org/do
+cs/messages/module-no
+t-found
+
+./src/app/[lang]/(das
+hboard)/apps/kanban/p
+age.tsx
+Module not found: 
+Can't resolve '@views
+/apps/kanban/styles.m
+odule.css'
+
+https://nextjs.org/do
+cs/messages/module-no
+t-found
+
+./src/app/[lang]/(das
+hboard)/apps/products
+ copy/add/page.tsx
+Module not found: 
+Can't resolve '@/view
+s/apps/ecommerce/prod
+ucts/adds/ProductAddH
+eader'
+
+https://nextjs.org/do
+cs/messages/module-no
+t-found
+
+
+> Build failed 
+because of webpack 
+errors

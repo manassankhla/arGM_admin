@@ -9,6 +9,8 @@ import { useRouter } from 'next/navigation'
 // MUI Imports
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
+import CardContent from '@mui/material/CardContent'
+
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import InputAdornment from '@mui/material/InputAdornment'
@@ -125,60 +127,62 @@ const BlogList = () => {
                     </div>
                 }
             />
-            <TableContainer component={Paper} className='shadow-none border rounded'>
-                <Table aria-label='blog posts table'>
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>S.No</TableCell>
-                            <TableCell>Title</TableCell>
-                            <TableCell>Category</TableCell>
-                            <TableCell>Published Date & Time</TableCell>
-                            <TableCell align='right'>Actions</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {displayedPosts.length === 0 ? (
+            <CardContent>
+                <TableContainer component={Paper} className='shadow-none border rounded'>
+                    <Table aria-label='blog posts table'>
+                        <TableHead>
                             <TableRow>
-                                <TableCell colSpan={5} align='center'>
-                                    {searchTerm ? 'No blogs match your search' : 'No blog posts found'}
-                                </TableCell>
+                                <TableCell>S.No</TableCell>
+                                <TableCell>Title</TableCell>
+                                <TableCell>Category</TableCell>
+                                <TableCell>Published Date & Time</TableCell>
+                                <TableCell align='right'>Actions</TableCell>
                             </TableRow>
-                        ) : (
-                            displayedPosts.map((row, index) => (
-                                <TableRow key={row.id}>
-                                    <TableCell>{page * rowsPerPage + index + 1}</TableCell>
-                                    <TableCell component='th' scope='row'>
-                                        <Typography variant='body1' className='font-medium'>{row.blogTitle}</Typography>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Chip label={row.category} size='small' color='primary' variant='tonal' />
-                                    </TableCell>
-                                    <TableCell>
-                                        {new Date(row.publishedAt).toLocaleString()}
-                                    </TableCell>
-                                    <TableCell align='right'>
-                                        <IconButton onClick={() => handleEdit(row)} color='primary' size='small'>
-                                            <i className='ri-edit-box-line' />
-                                        </IconButton>
-                                        <IconButton onClick={() => handleDelete(row.id)} color='error' size='small'>
-                                            <i className='ri-delete-bin-7-line' />
-                                        </IconButton>
+                        </TableHead>
+                        <TableBody>
+                            {displayedPosts.length === 0 ? (
+                                <TableRow>
+                                    <TableCell colSpan={5} align='center'>
+                                        {searchTerm ? 'No blogs match your search' : 'No blog posts found'}
                                     </TableCell>
                                 </TableRow>
-                            ))
-                        )}
-                    </TableBody>
-                </Table>
-            </TableContainer>
-            <TablePagination
-                rowsPerPageOptions={[5, 10, 25]}
-                component='div'
-                count={filteredPosts.length}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                onPageChange={handleChangePage}
-                onRowsPerPageChange={handleChangeRowsPerPage}
-            />
+                            ) : (
+                                displayedPosts.map((row, index) => (
+                                    <TableRow key={row.id}>
+                                        <TableCell>{page * rowsPerPage + index + 1}</TableCell>
+                                        <TableCell component='th' scope='row'>
+                                            <Typography variant='body1' className='font-medium'>{row.blogTitle}</Typography>
+                                        </TableCell>
+                                        <TableCell>
+                                            <Chip label={row.category} size='small' color='primary' variant='tonal' />
+                                        </TableCell>
+                                        <TableCell>
+                                            {new Date(row.publishedAt).toLocaleString()}
+                                        </TableCell>
+                                        <TableCell align='right'>
+                                            <IconButton onClick={() => handleEdit(row)} color='primary' size='small'>
+                                                <i className='ri-edit-box-line' />
+                                            </IconButton>
+                                            <IconButton onClick={() => handleDelete(row.id)} color='error' size='small'>
+                                                <i className='ri-delete-bin-7-line' />
+                                            </IconButton>
+                                        </TableCell>
+                                    </TableRow>
+                                ))
+                            )}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+                <TablePagination
+                    rowsPerPageOptions={[5, 10, 25]}
+                    component='div'
+                    count={filteredPosts.length}
+                    rowsPerPage={rowsPerPage}
+                    page={page}
+                    onPageChange={handleChangePage}
+                    onRowsPerPageChange={handleChangeRowsPerPage}
+                />
+            </CardContent>
 
             <EditBlogDrawer
                 open={editDrawerOpen}

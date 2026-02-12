@@ -1,0 +1,4062 @@
+﻿
+> materialize-mui-nextjs-admin-template@5.0.0 build
+> next build
+
+   Γû▓ Next.js 15.1.2
+
+   Creating an optimized production build ...
+ Γ£ô Compiled successfully
+   Linting and checking validity of types ...
+node.exe : 
+At C:\Program Files\n
+odejs\npm.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (:String   
+ ) [], RemoteExce    
+ption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+Failed to compile.
+
+./src/app/[lang]/(das
+hboard)/apps/user/vie
+w/page.tsx
+15:8  Error: 
+'UserRight' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+27:7  Error: 
+'tabContentList' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+55:9  Error: 'data' 
+is assigned a value 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+
+./src/app/[lang]/(das
+hboard)/dashboards/cr
+m/page.tsx
+7:8  Error: 
+'StackedBarChart' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+8:8  Error: 
+'DonutChart' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+10:8  Error: 
+'ProjectTimeline' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+14:8  Error: 
+'MeetingSchedule' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+15:8  Error: 
+'ExternalLinks' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+16:8  Error: 
+'PaymentHistory' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+17:8  Error: 
+'SalesInCountries' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+47:9  Error: 
+'serverMode' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+
+./src/components/card
+-statistics/Vertical.
+tsx
+8:8  Error: 
+'classnames' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+16:25  Error: 
+'trendNumber' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+16:38  Error: 
+'trend' is assigned 
+a value but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/components/dial
+ogs/edit-user-info/in
+dex.tsx
+17:8  Error: 'Chip' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+20:8  Error: 
+'Switch' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+22:10  Error: 
+'FormControlLabel' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+59:7  Error: 
+'languages' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+
+./src/components/layo
+ut/shared/search/inde
+x.tsx
+15:10  Error: 
+'CommandDialog' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+15:25  Error: 
+'CommandEmpty' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+15:39  Error: 
+'CommandGroup' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+15:53  Error: 
+'CommandInput' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+15:80  Error: 
+'CommandList' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+16:10  Error: 
+'Title' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+16:17  Error: 
+'Description' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+22:8  Error: 
+'DefaultSuggestions' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+23:8  Error: 
+'NoResult' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+84:7  Error: 
+'SearchItem' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+116:7  Error: 
+'CommandFooter' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+149:9  Error: 
+'pathName' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+155:9  Error: 
+'onSearchItemSelect' 
+is assigned a value 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+189:9  Error: 
+'limitedData' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+
+./src/components/layo
+ut/vertical/FooterCon
+tent.tsx
+17:11  Error: 'isBrea
+kpointReached' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+
+./src/components/layo
+ut/vertical/NavbarCon
+tent.tsx
+10:8  Error: 
+'NavSearch' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+11:8  Error: 
+'LanguageDropdown' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+13:8  Error: 
+'ShortcutsDropdown' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+21:7  Error: 
+'shortcuts' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+
+./src/views/apps/abou
+t/AboutDescription.ts
+x
+4:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+27:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+29:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/abou
+t/AboutHero.tsx
+64:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+66:13  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+68:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+84:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+111:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/abou
+t/AboutHistory.tsx
+41:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+43:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+50:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+65:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+73:13  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+76:13  Error: 
+'newItems' is never 
+reassigned. Use 
+'const' instead.  
+prefer-const
+77:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/abou
+t/AboutMission.tsx
+39:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+41:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+48:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+63:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+70:13  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+73:13  Error: 
+'newItems' is never 
+reassigned. Use 
+'const' instead.  
+prefer-const
+74:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/abou
+t/history/HistoryPage
+Hero.tsx
+66:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+86:23  Error: 'data' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/abou
+t/history/HistoryTime
+line.tsx
+41:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+43:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+64:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+72:13  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+75:13  Error: 
+'newItems' is never 
+reassigned. Use 
+'const' instead.  
+prefer-const
+76:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/abou
+t/history/HistoryTime
+lineDrawer.tsx
+84:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/abou
+t/history/OurHistoryS
+ection.tsx
+15:8  Error: 'List' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+16:8  Error: 
+'ListItem' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+24:8  Error: 
+'CustomAvatar' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+52:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+54:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+65:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/abou
+t/HistoryDrawer.tsx
+84:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/abou
+t/MissionDrawer.tsx
+81:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/blog
+/create-category/Crea
+teCategory.tsx
+69:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+82:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+104:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+125:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/blog
+/edit/EditBlog.tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+13:8  Error: 
+'Divider' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+14:8  Error: 
+'Typography' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+79:9  Error: 'watch' 
+is assigned a value 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+80:9  Error: 
+'setValue' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+104:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+106:13  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+107:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+212:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+329:81  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+338:65  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+383:85  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+423:85  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+463:85  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/blog
+/list/BlogList.tsx
+52:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+64:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/blog
+/list/EditBlogDrawer.
+tsx
+14:8  Error: 
+'InputAdornment' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+16:8  Error: 'Box' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+19:8  Error: 'Grid' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+104:9  Error: 
+'setValue' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+124:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+129:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+226:49  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+226:49  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+
+./src/views/apps/blog
+/write/WriteBlog.tsx
+44:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+90:9  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+139:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+144:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+150:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+170:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+183:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+188:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+262:65  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+262:65  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+285:45  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+285:45  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+298:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+300:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+413:57  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/care
+er/add/AddCategoryDra
+wer.tsx
+49:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+76:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+84:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+85:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+87:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+97:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/care
+er/add/AddJobTypeDraw
+er.tsx
+49:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+76:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+84:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+85:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+87:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+97:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/care
+er/add/CareerAddHeade
+r.tsx
+8:1  Error: `react` 
+import should occur 
+before import of 
+`next/link`  
+import/order
+
+./src/views/apps/care
+er/add/CareerInformat
+ion.tsx
+121:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+121:1  Error: 
+`react` import 
+should occur before 
+import of `@mui/mater
+ial/Divider`  
+import/order
+122:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+123:1  Error: 
+`next/navigation` 
+import should occur 
+before import of `@mu
+i/material/Divider`  
+import/order
+149:5  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+167:7  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+194:5  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+197:9  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+199:7  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+201:7  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+204:7  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+212:7  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+227:5  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/care
+er/add/CareerRelated.
+tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+67:9  Error: 'watch' 
+is assigned a value 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+68:9  Error: 
+'setValue' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+69:22  Error: 
+'errors' is assigned 
+a value but never 
+used.  @typescript-es
+lint/no-unused-vars
+103:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+142:65  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+153:49  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+198:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+238:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+278:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+318:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/care
+er/entry/EntryCard.ts
+x
+7:8  Error: 'Chip' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/care
+er/entry/EntryListTab
+le.tsx
+7:8  Error: 'Link' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+14:8  Error: 'Chip' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+15:8  Error: 
+'Checkbox' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+118:17  Error: 
+'locale' is assigned 
+a value but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/care
+er/entry/EntryTableFi
+lters.tsx
+10:15  Error: 
+'SelectChangeEvent' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/care
+er/view/CareerCard.ts
+x
+7:8  Error: 'Chip' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/care
+er/view/CareerListTab
+le.tsx
+15:8  Error: 
+'Checkbox' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+155:5  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+158:9  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+224:11  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+224:11  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+240:17  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+241:17  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+243:17  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+246:19  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+261:17  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+283:23  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+284:23  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+286:23  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+289:25  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/case
+study/CaseStudyEditor
+.tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+25:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+97:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+140:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+150:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+160:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+253:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+365:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/case
+study/CaseStudyLandin
+gSettings.tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+22:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+84:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+219:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/case
+study/CaseStudyRelate
+d.tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+67:19  Error: 
+'useWatchForm' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+95:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+104:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+149:65  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+160:49  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+205:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+245:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+285:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+325:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/case
+study/list/CaseStudyL
+ist.tsx
+24:1  Error: Imports 
+"CaseStudyPost" are 
+only used as type.  @
+typescript-eslint/con
+sistent-type-imports
+40:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+55:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+84:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+84:9  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+
+./src/views/apps/chat
+/ChatLog.tsx
+110:5  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+
+./src/views/apps/chat
+/UserProfileLeft.tsx
+9:8  Error: 
+'TextField' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+16:8  Error: 
+'ListItemButton' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+19:8  Error: 
+'Switch' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+21:8  Error: 
+'Button' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+62:9  Error: 'handleT
+woStepVerification' 
+is assigned a value 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+66:9  Error: 
+'handleNotification' 
+is assigned a value 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+
+./src/views/apps/chat
+/UserProfileRight.tsx
+10:8  Error: 
+'ListItemButton' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+13:8  Error: 
+'Button' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+
+./src/views/apps/cont
+act/ContactCard.tsx
+7:8  Error: 'Chip' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/cont
+act/ContactListTable.
+tsx
+4:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+5:10  Error: 
+'useParams' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+11:8  Error: 'Chip' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+12:8  Error: 
+'Checkbox' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/cont
+act/ContactTableFilte
+rs.tsx
+10:15  Error: 
+'SelectChangeEvent' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/data
+-protection/DataProte
+ctionDescription.tsx
+29:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+31:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/data
+-protection/DataProte
+ctionTabs.tsx
+38:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+40:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+61:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+70:13  Error: 
+'newItems' is never 
+reassigned. Use 
+'const' instead.  
+prefer-const
+71:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+84:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+85:9  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+
+./src/views/apps/ecom
+merce/products/add/Ad
+dProduct.tsx
+7:1  Error: Imports 
+"ProductItemType" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+
+./src/views/apps/ecom
+merce/products/all/Al
+lProductsManager.tsx
+4:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+25:1  Error: Imports 
+"ProductItemType" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+46:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+58:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/ecom
+merce/products/catego
+ry/ProductAssignmentM
+odal.tsx
+42:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+46:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+52:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+57:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+70:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+70:13  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+124:29  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+124:29  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+
+./src/views/apps/ecom
+merce/products/catego
+ry/ProductCategoryEdi
+tor.tsx
+23:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+45:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+48:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+51:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+97:12  Error: 
+'files' is assigned 
+a value but never 
+used.  @typescript-es
+lint/no-unused-vars
+106:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+109:17  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+114:17  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+158:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/ecom
+merce/products/catego
+ry/ProductCategoryLis
+t.tsx
+30:31  Warning: 'D:\w
+ork\arGM_Admin\src\vi
+ews\apps\ecommerce\pr
+oducts\product\Produc
+tPageEditor.tsx' 
+imported multiple 
+times.  
+import/no-duplicates
+32:1  Error: All 
+imports in the 
+declaration are only 
+used as types. Use 
+`import type`.  @type
+script-eslint/consist
+ent-type-imports
+32:33  Warning: 'D:\w
+ork\arGM_Admin\src\vi
+ews\apps\ecommerce\pr
+oducts\product\Produc
+tPageEditor.tsx' 
+imported multiple 
+times.  
+import/no-duplicates
+114:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+116:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+123:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+142:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+147:5  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+199:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/ecom
+merce/products/list/P
+roductView.tsx
+10:24  Error: 
+'productData' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/ecom
+merce/products/lists/
+ProductListTable.tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/ecom
+merce/products/produc
+t/CategoryProductsMan
+ager.tsx
+23:1  Error: All 
+imports in the 
+declaration are only 
+used as types. Use 
+`import type`.  @type
+script-eslint/consist
+ent-type-imports
+40:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+57:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/ecom
+merce/products/produc
+t/ProductManagerModal
+.tsx
+55:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+61:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/ecom
+merce/products/produc
+t/ProductPageEditor.t
+sx
+13:8  Error: 
+'InputAdornment' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+26:8  Error: 
+'TextEditor' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+27:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+33:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+44:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+51:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+54:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+65:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+70:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+74:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+77:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+155:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+157:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+375:53  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+375:53  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+388:77  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+390:81  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+705:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+707:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+722:77  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+752:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+754:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+769:77  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+799:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+801:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+816:77  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+846:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+848:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+863:77  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/ecom
+merce/products/Produc
+tLandingSettings.tsx
+2:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+13:8  Error: 
+'InputAdornment' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+23:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+32:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+35:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+46:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+51:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+55:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+58:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+69:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+137:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+204:45  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+204:45  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+217:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+219:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+448:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+462:57  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+465:57  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+475:49  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+475:49  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+488:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+490:77  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+549:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+563:57  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+566:57  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+576:49  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+576:49  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+589:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+591:77  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+652:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+666:57  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+669:57  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+679:49  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+679:49  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+692:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+694:77  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+781:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+800:65  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+804:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+875:76  Error: `"` 
+can be escaped with 
+`&quot;`, `&ldquo;`, 
+`&#34;`, `&rdquo;`.  
+react/no-unescaped-en
+tities
+875:85  Error: `"` 
+can be escaped with 
+`&quot;`, `&ldquo;`, 
+`&#34;`, `&rdquo;`.  
+react/no-unescaped-en
+tities
+
+./src/views/apps/even
+ts/EventsEditor.tsx
+23:8  Error: 
+'InputAdornment' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+51:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+80:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+134:9  Error: 
+'setValue' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+158:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+163:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+202:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+213:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+223:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+331:45  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+331:45  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+344:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+346:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+396:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+398:65  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+410:65  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/even
+ts/list/AddCategoryDr
+awer.tsx
+45:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+61:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+68:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+70:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+81:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/even
+ts/list/EventsList.ts
+x
+50:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+65:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+94:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+94:9  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+
+./src/views/apps/faq/
+FaqCard.tsx
+7:8  Error: 
+'Divider' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+35:11  Error: 
+'isBelowMdScreen' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+36:11  Error: 
+'isSmallScreen' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+
+./src/views/apps/faq/
+FaqDrawer.tsx
+49:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+57:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+59:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/faq/
+FaqListTable.tsx
+4:10  Error: 
+'useEffect' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+10:8  Error: 
+'Divider' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+17:8  Error: 
+'DialogContentText' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+27:5  Error: 'getFilt
+eredRowModel' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/gall
+ery/GalleryLandingSet
+tings.tsx
+27:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+43:9  Error: 
+'setValue' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+53:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+55:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+89:65  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+92:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+128:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+140:87  Error: `"` 
+can be escaped with 
+`&quot;`, `&ldquo;`, 
+`&#34;`, `&rdquo;`.  
+react/no-unescaped-en
+tities
+140:101  Error: `"` 
+can be escaped with 
+`&quot;`, `&ldquo;`, 
+`&#34;`, `&rdquo;`.  
+react/no-unescaped-en
+tities
+
+./src/views/apps/home
+/HomeAboutSection.tsx
+54:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+56:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+72:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/home
+/HomeArticlesSection.
+tsx
+3:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+28:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/home
+/HomeCaseStudySection
+.tsx
+3:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+28:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/home
+/HomeEventsSection.ts
+x
+3:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+27:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/home
+/HomeHeroSection.tsx
+63:11  Error: 
+'isVisible' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+68:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+70:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+87:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+114:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/home
+/HomeNewsSection.tsx
+3:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+28:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/home
+/HomePartsSection.tsx
+3:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+28:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/home
+/HomeProductsSection.
+tsx
+46:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+48:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/home
+/HomeServiceDrawer.ts
+x
+84:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/home
+/HomeServiceSection.t
+sx
+55:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+57:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+73:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+93:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+94:9  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+108:13  Error: 
+'newItems' is never 
+reassigned. Use 
+'const' instead.  
+prefer-const
+109:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/home
+/HomeTestimonialsSect
+ion.tsx
+3:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+27:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/indu
+stry/IndustryEditor.t
+sx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+22:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+92:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+120:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+130:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+224:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+306:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/indu
+stry/IndustryLandingS
+ettings.tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+21:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+61:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+154:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/indu
+stry/IndustryRelated.
+tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+18:8  Error: 
+'Button' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+21:31  Error: 
+'useWatch' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+62:42  Error: 'id' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+95:13  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+138:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+149:45  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+151:49  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+
+./src/views/apps/indu
+stry/list/IndustryLis
+t.tsx
+46:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+48:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+62:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+90:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/invo
+ice/add/AddCard.tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+20:20  Error: 
+'invoiceData' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/invo
+ice/edit/EditActions.
+tsx
+13:24  Error: 'id' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/invo
+ice/edit/EditCard.tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+22:21  Error: 'data' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+22:40  Error: 'id' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/invo
+ice/list/index.tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/invo
+ice/preview/index.tsx
+19:33  Error: 'id' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/loca
+tion/list/LocationLis
+t.tsx
+4:31  Error: 
+'useMemo' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+7:8  Error: 'Link' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+14:8  Error: 'Chip' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+28:8  Error: 
+'classnames' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+49:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+51:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+66:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+94:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/loca
+tion/LocationEditor.t
+sx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+7:10  Error: 
+'useRouter' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+100:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+145:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+155:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+270:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+352:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/news
+/list/AddCategoryDraw
+er.tsx
+45:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+61:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+68:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+70:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+81:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/news
+/list/NewsList.tsx
+3:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+4:8  Error: 'Link' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+50:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+65:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+94:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+94:9  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+
+./src/views/apps/news
+/NewsEditor.tsx
+73:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+151:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+156:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+161:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+184:13  Error: 
+'finalStatus' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+184:13  Error: 
+'finalStatus' is 
+never reassigned. 
+Use 'const' instead. 
+ prefer-const
+185:9  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+194:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+205:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+215:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+289:65  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+289:65  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+340:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+473:57  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/part
+s/category/CategoryLi
+st.tsx
+26:1  Error: `../Part
+sCategoryEditor` 
+type import should 
+occur after import 
+of 
+`@mui/material/Chip` 
+ import/order
+29:1  Error: `../Part
+sCategoryEditor` 
+import should occur 
+after import of 
+`@mui/material/Chip` 
+ import/order
+31:8  Error: 'Menu' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+32:8  Error: 
+'MenuItem' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+45:7  Error: 
+'MOCK_PRODUCTS' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+186:12  Error: 
+'menuAnchorEl' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+186:26  Error: 
+'setMenuAnchorEl' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+194:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+196:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+202:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+212:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+226:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+269:17  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+272:17  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+272:17  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+277:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+288:21  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+291:21  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+291:21  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+296:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+299:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+322:39  Error: 
+'parentId' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+330:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/part
+s/list/PartsList.tsx
+4:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+16:1  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+
+./src/views/apps/part
+s/PartDescriptionEdit
+or.tsx
+22:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+126:49  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+216:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+277:33  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/part
+s/PartDescriptionMana
+ger.tsx
+22:1  Error: Imports 
+"PartDescriptionType"
+ are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+33:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+40:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+46:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+58:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/part
+s/PartDescriptionSett
+ings.tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+22:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+91:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+139:33  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/part
+s/PartsCategoryEditor
+.tsx
+64:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+96:25  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+96:25  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+101:21  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+104:21  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+104:21  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+107:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+119:21  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+122:21  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+122:21  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+135:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+181:49  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+234:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/part
+s/PartsDetailSettings
+.tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+22:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+30:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+93:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+96:17  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+97:17  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+103:17  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+168:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/part
+s/PartsLandingSetting
+s.tsx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+22:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+75:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+177:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/part
+s/PartsRelated.tsx
+18:8  Error: 
+'Button' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+21:31  Error: 
+'useWatch' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+88:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+90:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+149:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+160:45  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/role
+s/RolesTable.tsx
+21:8  Error: 
+'Checkbox' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+
+./src/views/apps/seo/
+SeoDrawer.tsx
+122:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/seo/
+SeoList.tsx
+41:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+63:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+74:13  Error: 
+'newItems' is never 
+reassigned. Use 
+'const' instead.  
+prefer-const
+75:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/serv
+ices/category/Service
+AssignmentModal.tsx
+43:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+47:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+53:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+58:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+71:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+71:13  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+125:29  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+125:29  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+
+./src/views/apps/serv
+ices/category/Service
+CategoryEditor.tsx
+13:8  Error: 
+'IconButton' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+23:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+46:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+50:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+53:5  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+100:12  Error: 
+'files' is assigned 
+a value but never 
+used.  @typescript-es
+lint/no-unused-vars
+109:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+112:17  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+117:17  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+162:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/serv
+ices/category/Service
+CategoryList.tsx
+29:1  Error: Imports 
+"ServiceItemType" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+31:1  Error: There 
+should be at least 
+one empty line 
+between import 
+groups  import/order
+32:1  Error: 
+`valibot` import 
+should occur before 
+type import of `./Ser
+viceCategoryEditor`  
+import/order
+32:10  Error: 
+'number' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+120:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+122:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+129:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+146:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+151:5  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+205:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+223:21  Error: 
+Expected line before 
+comment.  
+lines-around-comment
+
+./src/views/apps/serv
+ices/category/Service
+ListDialog.tsx
+50:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+57:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+64:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+64:9  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+
+./src/views/apps/serv
+ices/category/Service
+MappingDialog.tsx
+44:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+50:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+79:13  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+79:13  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+
+./src/views/apps/serv
+ices/service/ServiceP
+ageEditor.tsx
+23:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+293:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+337:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+381:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+504:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+661:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+730:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/serv
+ices/ServiceLandingSe
+ttings.tsx
+8:1  Error: `react` 
+import should occur 
+before import of 
+`next/link`  
+import/order
+19:8  Error: 
+'InputAdornment' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+20:8  Error: 
+'Divider' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+28:1  Error: Imports 
+"RelatedContentData" 
+are only used as 
+type.  @typescript-es
+lint/consistent-type-
+imports
+28:8  Error: 
+'ServiceRelated' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+48:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+85:13  Error: 
+'fields' is assigned 
+a value but never 
+used.  @typescript-es
+lint/no-unused-vars
+85:21  Error: 
+'append' is assigned 
+a value but never 
+used.  @typescript-es
+lint/no-unused-vars
+85:29  Error: 
+'remove' is assigned 
+a value but never 
+used.  @typescript-es
+lint/no-unused-vars
+90:11  Error: 'relate
+dContentValue' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+94:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+104:11  Error: 'handl
+eRelatedContentSave' 
+is assigned a value 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+151:45  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+151:45  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+164:69  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+166:73  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/serv
+ices/ServiceRelated.t
+sx
+4:10  Error: 
+'useState' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+130:61  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+141:45  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/soci
+al-links/SocialLinksD
+rawer.tsx
+57:17  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+77:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+82:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+116:41  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+116:41  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+
+./src/views/apps/soci
+al-links/SocialLinksL
+ist.tsx
+20:8  Error: 'Chip' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+39:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+61:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+65:13  Error: 
+'newItems' is never 
+reassigned. Use 
+'const' instead.  
+prefer-const
+66:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/user
+/list/ChangePasswordD
+ialog.tsx
+29:13  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+31:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/user
+/list/UserListTable.t
+sx
+18:8  Error: 
+'Checkbox' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+52:8  Error: 
+'OptionMenu' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+170:9  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+170:9  Error: 
+Expected newline 
+before return 
+statement.  
+newline-before-return
+176:5  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+./src/views/apps/user
+/view/user-right/inde
+x.tsx
+8:8  Error: 'Tab' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+14:8  Error: 
+'CustomTabList' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+20:9  Error: 
+'handleChange' is 
+assigned a value but 
+never used.  @typescr
+ipt-eslint/no-unused-
+vars
+
+./src/views/Login.tsx
+16:8  Error: 
+'Checkbox' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+18:8  Error: 
+'FormControlLabel' 
+is defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+19:8  Error: 
+'Divider' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+33:15  Error: 
+'Locale' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+46:10  Error: 
+'getLocalizedUrl' is 
+defined but never 
+used.  @typescript-es
+lint/no-unused-vars
+92:17  Error: 
+'locale' is assigned 
+a value but never 
+used.  @typescript-es
+lint/no-unused-vars
+127:26  Error: 
+'data' is defined 
+but never used.  @typ
+escript-eslint/no-unu
+sed-vars
+134:5  Error: 
+Expected blank line 
+before this 
+statement.  padding-l
+ine-between-statement
+s
+
+info  - Need to 
+disable some ESLint 
+rules? Learn more 
+here: https://nextjs.
+org/docs/app/api-refe
+rence/config/eslint#d
+isabling-rules
